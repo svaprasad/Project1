@@ -1,0 +1,41 @@
+.oppty {
+    color: chocolate;
+    text-align: center;
+    background-color: black;
+}
+
+div > p {
+    color: rgb(0, 252, 0);
+    background-color: blue;
+    word-spacing: 15px;
+}
+
+p::first-letter {
+    color: brown;
+    font-size: 30px;
+}
+
+/* universal tag  */
+
+h2,h3,h6 {
+    color: darkmagenta;
+    font-size: large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.underline {
+    text-decoration: underline;
+    color: green;
+}
+
+Div ~ p {
+
+    color: rgb(50, 60, 247);
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 15px;
+}
+
+div + p {
+    color: red;
+    font-family: fantasy;
+}
