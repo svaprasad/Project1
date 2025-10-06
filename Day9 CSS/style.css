@@ -1,0 +1,124 @@
+body {
+    padding: 0%;
+    margin: 0%;
+    background: #EBFCFB;
+}
+
+.logo {
+    color: rgb(34, 232, 8);
+    font-size: 25px;
+    font-style: "Montserrat", sans-serif;
+    font-weight: 700;
+    background: #0f090f;
+    box-sizing: border-box;
+    margin-left: 10px;
+    
+}
+
+nav {
+    background-color: #80DED9;
+    display: flex;
+    margin: 0px;
+    pad: 0px 0px 10px 10px;
+    justify-content: space-between;
+    
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    z-index: 9999 ;
+}
+
+.nav-links {
+
+    list-style: none;
+    display: flex;
+    /* color: black; */
+    
+}
+.nav-links li {
+   /* padding: 0 12px;
+   margin: 0 10px; */
+/* color: black; */
+}
+.nav-links a {
+    font-size: 13px;
+    /* padding: 20x; */
+    margin: 10px;
+    color: white;
+    font-family: "Montserrat", sans-serif bold;
+    font-weight: 700;
+    background: #9929fb;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none; 
+}
+.iam {
+    background-color: none;
+    margin-top: 10rem;
+    font-size: 1rem;
+}
+.iam-parag {
+    text-align: left;
+    margin-right: 50%;
+    word-spacing: 3px;
+    letter-spacing: 2px;
+}
+.btn-hello {
+    background-color:#9929fb ;
+    border: none;
+    border-radius: 3px;
+    padding: 7px 10px 7px 10px;
+
+    color: white;
+    font-family: "Montserrat", sans-serif bold;
+    font-weight: 800;
+
+}
+
+div {
+    /* padding-left: 60%;
+    padding-top: -12rem;
+    padding-right: 0px;
+    display: right; */
+position: relative;
+right: -45rem;
+top: -20rem;
+left: 40rem;
+}
+
+.img-family img {
+    width: 350px;
+    height: 400px;
+    /* margin-right: 5px; */
+    padding: 5px;
+    background: rgb(247, 178, 178);
+    border-radius: 15px;
+    border-width: 3px;
+    
+}
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal boxes */
+    gap: 7px;
+    
+    padding: 20rem;
+    text-align:center;                                                                                                                                                       
+    
+  }
+
+  .box {
+    background: rgba(248, 129, 248,0.3);
+    
+    /* border: 3px solid #333; */
+    /* text-align: center; */
+    /* border-radius: 10px; */
+    position: relative;
+    left: -60rem;
+    top: -20rem;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    justify-content: center;
+    line-height: 50px;
+  }
