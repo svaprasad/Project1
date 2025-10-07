@@ -35,11 +35,6 @@ nav {
     /* color: black; */
     
 }
-.nav-links li {
-   /* padding: 0 12px;
-   margin: 0 10px; */
-/* color: black; */
-}
 .nav-links a {
     font-size: 13px;
     /* padding: 20x; */
@@ -76,10 +71,6 @@ nav {
 }
 
 div {
-    /* padding-left: 60%;
-    padding-top: -12rem;
-    padding-right: 0px;
-    display: right; */
 position: relative;
 right: -45rem;
 top: -20rem;
@@ -89,7 +80,6 @@ left: 40rem;
 .img-family img {
     width: 350px;
     height: 400px;
-    /* margin-right: 5px; */
     padding: 5px;
     background: rgb(247, 178, 178);
     border-radius: 15px;
@@ -99,7 +89,7 @@ left: 40rem;
 
   .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal boxes */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 7px;
     
     padding: 20rem;
@@ -109,10 +99,6 @@ left: 40rem;
 
   .box {
     background: rgba(248, 129, 248,0.3);
-    
-    /* border: 3px solid #333; */
-    /* text-align: center; */
-    /* border-radius: 10px; */
     position: relative;
     left: -60rem;
     top: -20rem;
