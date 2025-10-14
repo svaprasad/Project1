@@ -1,0 +1,177 @@
+
+body {
+     font-family: "Playfair Display", serif;
+     padding: 0px;
+     margin: 0px;
+     word-spacing: 2px;
+     letter-spacing: 2px;
+}
+
+.logo {
+    color: rgb(34, 232, 8);
+    font-size: 25px;
+    font-style: "Montserrat", sans-serif;
+    font-weight: 700;
+    background: #0f090f;
+    box-sizing: border-box;
+    margin-left: 10px;
+    
+}
+.logo:hover {
+    background-color: #d8e1ff;
+}
+
+nav {
+    background-color: #80DED9;
+    display: flex;
+    margin: 0px;
+    pad: 0px 0px 10px 10px;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    z-index: 9999 ;
+}
+
+.nav-links {
+
+    list-style: none;
+    display: flex;
+    /* color: black; */
+    
+}
+.nav-links a {
+    font-size: 13px;
+    /* padding: 20x; */
+    margin: 10px;
+    color: white;
+    font-family: "Montserrat", sans-serif bold;
+    font-weight: 700;
+    background: #9929fb;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none; 
+}
+.nav-links a:hover {
+    background-color: #d8e1ff;
+}
+
+.port-container {
+    /* margin-top: -10rem; */
+    justify-content: center;
+    
+}
+
+.port-text h2 {
+
+    font-size: 40px;
+    /* margin-left: 30rem; */
+  text-align: center;
+  font-weight: 400;
+  
+}
+
+
+.port-text p {
+    font-size: 15px;
+    /* background-color: white; */
+    text-align: center;
+    font-size: 18px;
+    color: rgba(170, 171, 174,0.9)
+}
+
+
+/* Basic reset */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  padding: 30px;
+} */
+
+/* Container for cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Card style */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 10px 6px 15px rgba(0,0,0,0.1);
+  width: 300px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform -1.5s;
+}
+
+.card:hover {
+  transform: translateY(-15px);
+}
+
+/* Image inside card */
+.card img {
+  width: 300px;
+  height: 250px  
+}
+
+/* Text styling */
+.card h3 {
+  margin: 50px 0 10px;
+  color: #333;
+   font-family: "Playfair Display", serif;
+}
+
+.card p {
+  padding: 0 15px 15px;
+  color: #666;
+  font-size: 14px;
+   font-family: "Playfair Display", serif;
+}
+
+/* Button styling */
+.card button {
+  background-color: whitesmoke;
+  color: rgb(18, 5, 5);
+  font-family: "Playfair Display", serif, bold;
+  font-weight: bold;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border-color: black;
+  margin-left: -50px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  
+}
+
+.card button:hover {
+  background-color: #9929fb;;
+}
+
+.more-btn {
+
+ background-color: #9929fb;
+  color: rgb(255, 255, 255);
+  font-family: "Playfair Display", serif, bold;
+  font-weight: bold;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  border-color: black;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px ;
+  margin-left: 35rem;
+  /* margin-right: -30px; */
+  cursor: pointer;
+}
