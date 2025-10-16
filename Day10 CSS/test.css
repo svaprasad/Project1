@@ -27,6 +27,7 @@
       font-family: "Work Sans", sans-serif;
     }
 
+
     /* Logo section */
     .logo {
       display: flex;
@@ -128,6 +129,12 @@
 box-shadow: 0 8px 18px rgba(0,0,0,0.08);
   
 }
+
+.main {
+      
+background: radial-gradient(circle at 12% 100%, #ffe2b0f5 1%, #ffe2b0f5 5px, #0000 15%), radial-gradient(circle at 95% -15%, #da4df166 5%, #0000 30%), radial-gradient(circle at 100%, #c4f5e9b2 2%, #0000 35%);
+}
+
 
 /* gradinet highlight for text  */
 .highlight {
