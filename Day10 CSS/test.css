@@ -126,11 +126,12 @@
  box-sizing: border-box; 
  margin-top: -330px;
  border-radius: 15px;
+ background-color: white;
 box-shadow: 0 8px 18px rgba(0,0,0,0.08);
   
 }
 
-.main {
+.gradient {
       
 background: radial-gradient(circle at 12% 100%, #ffe2b0f5 1%, #ffe2b0f5 5px, #0000 15%), radial-gradient(circle at 95% -15%, #da4df166 5%, #0000 30%), radial-gradient(circle at 100%, #c4f5e9b2 2%, #0000 35%);
 }
@@ -328,7 +329,7 @@ padding-top: 10px;
       padding-left: 10px;
       max-width: 1300px;
       height: 900px; 
-  
+
      }
 
     /* .work-text1  {
@@ -390,20 +391,20 @@ padding-top: 10px;
 
 
  .workcard-container {
-  display: grid ;
+  display: grid;
   flex-wrap: wrap;
   grid-template-columns: repeat(2,1fr);
   gap: 17px;
   justify-content: center;
-  margin-top: -8rem;
-  margin-left: 50rem;
+  margin-top: -20rem;
+  margin-left: 35rem;
   padding: 10px;
-  width: 400px;
   
 } 
 
 /* Card style */
- .work-card {
+.work-card {
+   width: 300px;
   
   background-color: #fff;
   border-radius: 10px;
@@ -987,6 +988,15 @@ margin-top: 100px;
       transition: 0.2s;
       
     }
+.foot-links li a:hover {
+
+  text-decoration: underline;
+
+
+}
+
+
+
     .copy {
     
       text-align: right;
