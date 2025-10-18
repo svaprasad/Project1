@@ -1,0 +1,131 @@
+     .work-container {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(193, 192, 192,0.2);
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      padding-left: 10px;
+      max-width: 1300px;
+      height: 900px; 
+
+     }
+
+    .work1 {
+      /* text-align: left; */
+       display: grid;
+      margin-top: -50px;
+       grid-template-columns:repeat(2,1fr);
+       /* flex-wrap: wrap;  */
+       /* margin-top: 80px; */
+       width: 500px;
+       gap: 10px;
+      justify-content: center;
+      justify-content: space-between;
+    } 
+    
+    .work-text {
+     /* display: flex; */
+     text-align: left;
+      /* margin-top: 0rem; */
+
+
+    }
+    .work-text h1 {
+      font-size: 50px;
+      font-weight: 600;
+    
+
+
+    }
+
+    .work-text p  {
+   
+      font-size: 20px;
+      /* transition: transform 0.1s; */
+      color: rgb(100, 100, 100,0.9)
+    }
+    
+    .work-card i {
+      
+      background-color:none;
+      color: #a681e7;
+      margin-bottom: 15px;
+      /* margin-left: -50px; */
+      border: none;
+      border-radius: 10px;
+      box-sizing: border-box;
+      box-shadow: 0 4px 7px;
+      width: 60px;
+      height: 50px;
+      padding: 16px;
+      padding-left: 20px;
+      font-size: 20px;
+      margin-left: -30px;
+      
+    }
+    
+    .work-card i:hover {
+      background-color: #7b2cff;
+      color: white;
+    }
+
+   
+
+
+ /* .workcard-container {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(2,1fr);
+  gap: 17px;
+  justify-content: center;
+  margin-top: -20rem;
+  margin-left: 35rem;
+  padding: 10px;
+  
+}  */
+
+/* Card style */
+.work-card {
+   /* width: 250px;
+   height: 200px; */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 10px 6px 15px rgba(0,0,0,0.1);
+  padding: 10px;
+  text-align: center;
+  
+
+}
+
+.work-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 10px 15px rgba(167, 167, 172, 0.7);
+}
+
+
+/* Text styling */
+.work-card h4 {
+  text-align: left;
+  margin: 50px 0 10px;
+  color: #333; 
+  padding-left: 0px; 
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.work-card p {
+  display: block;
+  text-align: left;
+  /* padding:  30px; */
+  color: #666;
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 10px;
+  padding-left: 10px;
+  /* justify-content: center; */
+}

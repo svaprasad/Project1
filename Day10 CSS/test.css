@@ -67,6 +67,8 @@
       font-size: 16px;
       padding: 10px 13px;
       border-radius: 6px;
+      border: none;
+      box-sizing: border-box;
       transition: 0.2s;
    }
 
@@ -98,6 +100,7 @@
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
+  
   
 }
  /* h1 tag  */
@@ -179,7 +182,7 @@ background-color: #6a23d1;
   
   .box {
     width: 200px;
-    background: #f881f84d;
+    background-color: #f881f84d;
     font-size: 17px;
     /* display: block; */
     justify-content: center;
@@ -317,8 +320,8 @@ padding-top: 10px;
 
     /* work process page CSS */
 
-     .work-container {
-      display: flex;
+         .work-container {
+      display: grid;
       grid-template-columns: repeat(2,1fr);
       flex-wrap: wrap;
       align-items: center;
@@ -332,35 +335,41 @@ padding-top: 10px;
 
      }
 
-    /* .work-text1  {
-      text-align: left;
-      /* display: flex; */
-      /* margin-top: 80px;
-      justify-content: center; */
-    } */
+    .work1 {
+      /* text-align: left; */
+       display: grid;
+      margin-top: -50px;
+       grid-template-columns:repeat(2,1fr);
+       /* flex-wrap: wrap;  */
+       /* margin-top: 80px; */
+       width: 500px;
+       gap: 10px;
+      justify-content: center;
+      justify-content: space-between;
+    } 
     
     .work-text {
-     display: flex;
+     /* display: flex; */
+     text-align: left;
       /* margin-top: 0rem; */
 
 
     }
     .work-text h1 {
-      font-size: 50px;
+      font-size: 47px;
       font-weight: 600;
-      /* margin-top: 10rem; */
-      text-align: left;
-      margin-top: 30px;
+
+    
 
 
     }
 
     .work-text p  {
-      text-align: left;
-      padding-left: -10px;
-      font-size: 17px;
-      transition: transform 0.1s;
-      color: rgb(100, 100, 100,0.9)
+   
+      font-size: 18px;
+      /* transition: transform 0.1s; */
+      color: rgb(100, 100, 100,0.9);
+      word-spacing: 2px;
     }
     
     .work-card i {
@@ -373,14 +382,14 @@ padding-top: 10px;
       border-radius: 10px;
       box-sizing: border-box;
       box-shadow: 0 4px 7px;
-      width: 70px;
+      width: 65px;
       height: 60px;
-      padding: 20px;
-      padding-left: 20px;
+      padding: 16px;
       font-size: 20px;
-      margin-left: -30px;
+      margin-left: -60%;
+      margin-top: 20px;
       
-    }
+    } 
     
     .work-card i:hover {
       background-color: #7b2cff;
@@ -390,27 +399,19 @@ padding-top: 10px;
    
 
 
- .workcard-container {
-  display: grid;
-  flex-wrap: wrap;
-  grid-template-columns: repeat(2,1fr);
-  gap: 17px;
-  justify-content: center;
-  margin-top: -20rem;
-  margin-left: 35rem;
-  padding: 10px;
-  
-} 
+ 
 
 /* Card style */
 .work-card {
-   width: 300px;
-  
+    width: 250px;
+   height: 250px; 
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 10px 6px 15px rgba(0,0,0,0.1);
-  padding: 10px;
+  padding: 20px;
   text-align: center;
+  /* margin-left: -30px; */
+  /* gap: 20px; */
   
 
 }
@@ -429,8 +430,8 @@ padding-top: 10px;
   padding-left: 0px; 
   margin-left: 20px;
   margin-top: 20px;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 19px;
+  font-weight: 600;
 }
 
 .work-card p {
@@ -438,12 +439,14 @@ padding-top: 10px;
   text-align: left;
   /* padding:  30px; */
   color: #666;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
-  margin-left: 10px;
-  padding-left: 10px;
-  /* justify-content: center; */
+  padding-left: 20px;
+
 }
+
+
+/* --------port page css starts------- */
 
 .port-container {
     /* margin-top: -10rem; */
@@ -468,20 +471,6 @@ padding-top: 10px;
     font-size: 18px;
     color: rgba(170, 171, 174,0.9)
 }
-
-
-/* Basic reset */
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
-
-/* body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  padding: 30px;
-} */
 
 /* Container for cards */
 .card-container {
@@ -515,27 +504,24 @@ padding-top: 10px;
 /* Text styling */
 .card h3 {
   margin: 50px 0 10px;
+  font-weight: 600;
   color: #333;
-   font-family: "Playfair Display", serif;
 }
 
 .card p {
   padding: 0 15px 15px;
   color: #666;
   font-size: 14px;
-   font-family: "Playfair Display", serif;
 }
 
 /* Button styling */
 .card button {
-  background-color: whitesmoke;
+  background-color: #fff;
   color: rgb(18, 5, 5);
-  font-family: "Playfair Display", serif, bold;
   font-weight: bold;
-  border: none;
+   border: 1px solid transparent;
   padding: 10px 15px;
   border-radius: 5px;
-  border-color: black;
   margin-left: -50px;
   margin-bottom: 20px;
   cursor: pointer;
@@ -543,7 +529,9 @@ padding-top: 10px;
 }
 
 .card button:hover {
-  background-color: #9929fb;
+  color: #9929fb;
+  border-color: #6a23d1;
+
 }
 
 .more-btn {
@@ -560,7 +548,6 @@ padding-top: 10px;
   margin-bottom: 20px;
   margin-top: 20px ;
   margin-left: 35rem;
-  /* margin-right: -30px; */
   cursor: pointer;
 }
 
@@ -569,15 +556,14 @@ padding-top: 10px;
 
 .idea {
   display: flex;
-  max-width: 1200px;
+  max-width: 1249px;
   width: auto;
   height: 500px;
   box-sizing: border-box;
   box-shadow: 5px 5px 13px ;
-  margin-left: 20px;
   background-color: #062726;
   color: white;
-  /* display: inline; */
+
 }
 .card-black h2 {
   color: white;
@@ -619,6 +605,8 @@ word-spacing: 2px;
   background-color: #6e16bc;
 }
 
+
+/* <------------ blog page starts -------------> */
 
 .blog-container {
   display: flex;
@@ -675,8 +663,10 @@ color: rgba(188, 183, 183,0.9);
    font-family: "Playfair Display", serif;
 }
 
+/*<------------- services page css starts--------> */
+
 .what-i-do {
-  padding: 80px 10%;
+  padding: 20px 10px;
 }
 
 .services-text {
@@ -685,33 +675,36 @@ color: rgba(188, 183, 183,0.9);
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 40px;
+  /* text-align: left; */
 }
 
 .content {
   flex: 1 1 40%;
+  margin-top: 150px;
+  
 }
 
 .content h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-  font-weight: 700;
+  font-size: 3rem;
+  font-weight: 600;
   color: #111;
 }
 
 .content p {
   color: #666;
-  margin-bottom: 20px;
+  font-size: 18px;
   line-height: 1.6;
 }
 
 .services-btn {
-  background: linear-gradient(90deg, #a855f7, #7e22ce);
+  background: #9929fb;
   color: white;
   border: none;
-  padding: 12px 24px;
+  padding: 14px 28px;
   border-radius: 6px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
+  margin-top: 50px;
 }
 
 .services-btn:hover {
@@ -722,24 +715,52 @@ color: rgba(188, 183, 183,0.9);
   color: white;
 }
 
+.brands {
+  display: flex;
+  gap: -100px;
+  text-align: center;
+
+}
+.brands img {
+  color: #ccc;
+  width: 100px;
+  margin-left: 80px;
+  margin-right: 30px;
+  margin-bottom: 100px;
+
+}
+.brands img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+
+
+
 /* Right Cards */
 .services-card {
-  flex: 1 1 50%;
+  /* flex: 1 1 50%; */
+  width: 600px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  
+  gap: 25px;
+  padding-right: 10px;
 }
 
 .c1 {
+  box-shadow: 15px 30px 30px 20px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  padding: 30px;
   background: white;
-  padding: 20px 25px;
-  border-radius: 20px;
-  box-shadow: 15px 30px 10px rgba(0,0,0,0.05);
+  border-left: 2px solid transparent;
+  transition: border-color 0.3s ease;
 }
 
-.c1 h3 {
-  font-size: 1.2rem;
+.c1:hover {
+  border-left: 5px solid #9929fb;
+}
+.c1 h2 {
+  font-size: 1.4rem;
   margin-bottom: 10px;
   color: #111;
 }
@@ -758,13 +779,15 @@ color: rgba(188, 183, 183,0.9);
 }
 .client p {
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
   color: rgba(134, 134, 139,0.9)
+  
 }
 .elon-max {
   color: #000;
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 500;
 }
 
  /* <------ contact page css -----> */
@@ -774,11 +797,11 @@ color: rgba(188, 183, 183,0.9);
 .contact-section {
   background: #fff;
   /* width: 100%; */
-  width: 1100px;
-  padding: 30px;
-  margin-left: -90px;
+  width: 1190px;
+  padding: 40px 20px;
+  margin-left: 10px;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  box-shadow: 20px 10px 30px rgba(0,0,0,0.2);
 }
 
 .contact-container {
@@ -899,10 +922,7 @@ input {
   gap: 15px;
 }
 
-textarea {
-  resize: none;
-  min-height: 80px;
-}
+
 
 .btn-sub {
   margin-top: 10px;
@@ -940,8 +960,8 @@ width: 1250px;
 margin-bottom: -70px;
 display: block;
 height: 300px;
-margin-left: -120px;
-/* border-radius: 15px; */
+/* margin-left: -120px; */
+border-radius: 10px;
 
 
 
@@ -975,7 +995,7 @@ margin-top: 100px;
       list-style: none;
       /* gap: 7px; */
       text-align: center;
-      margin-left: 340px;
+      margin-left: 380px;
       margin-top: -40px;
     }
 
@@ -994,8 +1014,6 @@ margin-top: 100px;
 
 
 }
-
-
 
     .copy {
     
