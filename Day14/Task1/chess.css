@@ -1,3 +1,10 @@
+:root {
+    --background--color:#f5f5dc;               /* background-color for chess box */
+    --green--background: #99cc66;               /* background color for green cells */
+    --pieces-color-black:black;                          /* color for black pieces */
+    --pieces-color-white:white;                    /* color for white pieces */
+}
+
 body {
     display: flex;
     align-items: center;
@@ -34,19 +41,19 @@ body {
     width: calc(100%/8);
     text-align: center;
     /* font-size: 70px; */
-    color: black;
+    color: var(--pieces-color-black);
     
 }
 
 
 .w {
-    background-color: #f5f5dc;
+    background-color: var(--background--color);
     width: 100%;
     height: 12.5%;
     /* color: black; */
 }
 .b {
-    background-color: #99cc66;
+    background-color: var(--green--background);
     /* color: white; */
      width: 100%;
     height: 12.5%;
