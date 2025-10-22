@@ -1,0 +1,58 @@
+:root {
+    --bg-light: #ffffff;
+    --text-light: #000000;
+    --bg-dark: #121212;
+    --text-dark: #ffffff;
+  }
+
+  body {
+    margin: 0;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    text-align: center;
+    transition: all 0.4s ease;
+  }
+
+  /* Hidden checkbox for toggle */
+  #mode-toggle {
+    display: none;
+  }
+
+  label {
+    display: inline-block;
+    margin-top: 1rem;
+    background: #ddd;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+  }
+
+  /* Dark Mode styles when checkbox is checked */
+  #mode-toggle:checked ~ .page {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+
+  #mode-toggle:checked + label {
+    background: #333;
+    color: #fff;
+  }
+
+  .page {
+    margin-top: 2rem;
+    padding: 5rem;
+    width: 1100px;
+    height: 900px;
+    text-align: center;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+  }
+
+  h1 {
+    margin-top: 0;
+  }

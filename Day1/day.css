@@ -1,0 +1,24 @@
+/* div  {
+    background-color: green;
+    color: white;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+} */
+
+.visible {
+ background-color: blue;
+    /* visibility: hidden; */
+}
+
+.none {
+
+    background-color: yellow;
+    /* display: none; */
+}
+
+.opacity {
+    background-color: green;
+    opacity: 0.4;
+}
