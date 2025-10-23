@@ -103,6 +103,8 @@
     height: 150px;
     background: lightblue;
     animation: colorChange 3s infinite;
+    text-align: center;
+    padding-top: 50px;
   }
 
   @keyframes colorChange {
@@ -111,17 +113,20 @@
     100% { background: rgb(215, 81, 15); }
   }
 
-   /* ---------colorchange practice1-------  */
+   /* ---------colorchange practice2-------  */
 
 
   .color-change {
     width: 150px;
     height: 150px;
     background-color: rgb(231, 109, 109);
-    animation: colorChange 5s infinite;
+    animation: clchange 5s infinite;
+    text-align: center;
+    padding-top: 50px;
+
   }
 
-  @keyframes colorChange {
+  @keyframes clchange {
     0%{ background-color: lightblue;}
     20% {background-color: rgb(38, 228, 82);}
     50% {background-color: burlywood;}
@@ -178,7 +183,7 @@
     padding-top: 70px;
     margin: 50px auto;
     border-radius: 10px;
-    animation: bounceIn 4s ease;
+    animation: bounceIn 4s ease  infinite;
   }
 
   @keyframes bounceIn {
@@ -190,9 +195,9 @@
       opacity: 1;
       transform: scale(1.05);
     }
-    /* 70% {
+    70% {
       transform: scale(0.9);
-    } */
+    }
     100% {
       transform: scale(2);
     }
@@ -208,7 +213,7 @@
     text-align: center;
     padding-top: 70px;
     background-color: aqua;
-    animation: bounceOut 3s ease;
+    animation: bounceOut 3s ease infinite;
     border-radius: 10px;
     margin: 20px auto;
 
