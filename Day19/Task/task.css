@@ -1,0 +1,111 @@
+    body {
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      color: white;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      border-radius: 10px;
+      opacity: 0.7;
+    }
+
+    .box1 {
+      background-color: crimson;
+      top: 40px;
+      left: 20px;
+      z-index:1; /* Try changing this to 3 */
+    }
+
+    .box2 {
+      background-color: royalblue;
+      top: 120px;
+      left: 120px;
+      z-index: 2; /* Try changing this to 1 */
+    }
+
+    .box3 {
+      background-color: rgb(42, 172, 25);
+      top: 200px;
+      left: 220px;
+      z-index: 3; /* Try changing this to 2 */
+    }
+
+
+    .box1:hover {
+        transform: scale(0.8);
+
+    }
+    .box2:hover {
+        transform: scale(0.8);
+
+    }
+    .box3:hover {
+        transform: scale(0.8);
+
+    }
+
+
+
+       /* body {
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    } */
+
+    .card {
+      position: relative; /* Needed for absolute positioning inside */
+      width: 280px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      margin-left: 40%;
+    }
+
+    .badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: crimson;
+      color: #fff;
+      padding: 5px 10px;
+      font-size: 14px;
+      border-radius: 20px;
+      font-weight: bold;
+      z-index: 2; /* Ensures it stays above the card content */
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      margin: 15px 0 5px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 14px;
+    }

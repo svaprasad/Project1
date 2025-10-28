@@ -1,0 +1,97 @@
+.btn {
+padding: 10px 25px;
+text-align: center;
+width: 110px;
+height: 40px;
+background-color: rgb(190, 241, 139);
+margin-top: 100px;
+margin-left: 100px;
+border-radius: 10px;
+/* color: white; */
+}
+
+.btn:hover {
+    background-color: red;
+
+}
+
+.btn:active {
+    background-color: black;
+    color: white;
+}
+
+        /* ------------practice 2---------- */
+
+
+.btn2 {
+    width: 110px;
+    background-color: rgb(134, 134, 240);
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.btn2:hover {
+    background-color: rgb(243, 243, 113);
+}
+
+.btn2:active {
+    background-color: black;
+    color: white;
+}
+
+
+p::first-letter {
+    color: green;
+    font-size: 30px;
+
+}
+
+.para::first-letter {
+    color: red;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.big::first-line {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+/* ------------nth-child--------- */
+
+.list1 li:nth-child(odd) {
+  background-color: #1daa42; 
+  display: inline;
+}
+
+.list1 li:nth-child(3) {
+  background-color: #dc2121;
+  display: inline;
+}
+.list2 li:nth-child(2) {
+    display: inline;
+  background-color: #1b18bd; 
+}
+.list2 li:nth-child(4) {
+    display: inline;
+  background-color: #1daa42; 
+}
+
+
+        /* -----------::before ::after---------- */
+
+.list1 li::before {
+content: "💗";
+}
+
+.list1 li::after {
+    content: "💗";
+}
+.list2 li::before {
+content: "💗";
+}
+
+.list2 li::after {
+    content: "💗";
+}
