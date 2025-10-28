@@ -1,0 +1,76 @@
+/* Default Desktop View */
+body {
+  background-color: white;
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: grid;
+  /* 3 boxes in a row */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 15px;
+}
+
+.box {
+  padding: 40px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.box1 { background-color: crimson; }
+.box2 { background-color: teal; }
+.box3 { background-color: orange; }
+
+/* ----------  mobile view (<480px) ---------- */
+
+
+@media (max-width: 480px) {
+  body {
+    background-color: lightblue;
+  }
+  .container {
+    /* 1 column */
+    grid-template-columns: 1fr; 
+  }
+}
+
+/* ----------  tablet view (<768px) ---------- */
+
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    background-color: lightyellow;
+  }
+  .container {
+    /* 2 columns */
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+/* ----------  DESKTOP VIEW (>=769px) ---------- */
+
+
+@media (min-width: 769px) {
+  body {
+    background-color: white;
+  }
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ----------  orientation views ---------- */
+@media (orientation: landscape) {
+  body {
+    background-color: green;
+  }
+}
+
+@media (orientation: portrait) {
+  body {
+    background-color: purple;
+  }
+}
