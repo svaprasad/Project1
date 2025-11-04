@@ -15,32 +15,32 @@
 
 
  .navbar {
-    background: #fff8f8;
-    justify-content: space-between;
-   position: fixed;
-    top: 0;
-  left: 0;
-  z-index: 1000;
-  width: 100%;
-   padding: 15px 0;
+   
+  justify-content: space-between;
   text-align: center;
- 
-
 
 } 
-.container {
+.container-fluid {
     /* display: contents; */
     /* padding: 20px; */
-   
+    position: fixed;
+    top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+   padding: 15px 0;
+   background-color:#fff8f8 ;
   
 }   
+
 
 .logo {
     font-size: 36px;
     text-decoration: none;
     color: #464646;
     font-weight: bold;
-    padding: 5px 0px;
+    padding: 10px 0px;
+    margin-left: 25px;
     
 }
 
@@ -57,11 +57,15 @@
 .tittle::before {
     content: url(./Assets/n.jpeg);
 }
+
+
+
 .nav-item a{
     color: #333333;
     display: block;
     /* padding: 8px; */
     font-size: 16px;
+
     
 }
 
@@ -128,9 +132,9 @@
 
 }
 .btn-work {
-
+    background-color: #fff8f8;
     font-size: 15px;
-   font-weight: 600;
+    font-weight: 600;
     padding: 15px 30px;
     color: #100f0f;
     border-radius: 5px;
@@ -255,6 +259,8 @@
     font-size: 80px;
 
 }
+
+        /* -----services css ------  */
 .services {
     text-align: center;
 }
@@ -264,8 +270,9 @@
     font-size: 25px;
 }
 .services h3 {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 600;
+   
 
 }
 
@@ -290,11 +297,13 @@
     background-color: #ff5252;
     font-size: 28px;
     line-height: 58px;
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     border-radius: 10px;
     margin-left: 170px;
     margin-bottom: 10px;
+    
+    
 }
 
 #ser-card {
@@ -314,7 +323,7 @@
     font-size: 25px;
 }
 .portfolio h3 {
-    font-size: 60px;
+    font-size: 55px;
     font-weight: 600;
 
 }
@@ -462,7 +471,7 @@
 }
 .test {
     padding: 160px 0;
-    background: linear-gradient(rgba(5, 4, 4, 0.69), rgba(5, 4, 4, 0.74)), url(./Assets/test.jpeg) no-repeat;
+    background: linear-gradient(rgba(5, 4, 4, 0.69), rgba(5, 4, 4, 0.74)), url(./Assets/test.jpeg) no-repeat fixed;
 }
 .test-card {
     margin-left: auto;
