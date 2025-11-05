@@ -9,7 +9,7 @@
 :root{
  
 --font-color:#ff5252;
-
+--bg-color:#ffffff;
 
 }
 
@@ -29,10 +29,10 @@
   z-index: 9999;
   width: 100%;
    padding: 15px 0;
-   background-color:#fff8f8 ;
+   background-color:var(--bg-color)
   
 }   
-
+          /* ------------  logo css ----------- */
 
 .logo {
     font-size: 36px;
@@ -58,7 +58,7 @@
     content: url(./Assets/n.jpeg);
 }
 
-
+            /* ------------nav bar css----------- */
 
 .nav-item a{
     color: #333333;
@@ -87,6 +87,8 @@
     background-color: black;
     color: #ff5252;
 }
+
+        /* ----------navbar css end ----------- */
 
 .content .row {
     margin-left: 55px;
@@ -132,7 +134,7 @@
 
 }
 .btn-work {
-    background-color: #fff8f8;
+    background-color:var(--bg-color);
     font-size: 15px;
     font-weight: 600;
     padding: 15px 30px;
@@ -154,12 +156,18 @@
     font-size:20px;
     font-weight: 600;
 }
+            /* ---------- person image css ------------ */
 .person {
     background: url(./Assets/Design.jpeg) center no-repeat;
     /* background-color: none; */
     background-size: 100%;
     text-align: center;
 }
+
+        /* --------person image css end ---------- */
+
+    /* ------------black card css ------------ */
+
 .content {
     background-color: #fff8f8;
 }
@@ -260,7 +268,10 @@
 
 }
 
-        /* -----services css ------  */
+       /* ------- black color card css end ----------- */
+
+
+        /* -----services section css ------  */
 .services {
     text-align: center;
 }
@@ -314,6 +325,10 @@
     box-shadow: 5px 5px 10px rgb(181, 176, 176);
 }
 
+        /* ----------- service section css end---------- */
+
+    /* ------portfolio css -----------  */
+
 .portfolio {
     text-align: center;
 }
@@ -321,6 +336,7 @@
 .portfolio h5 {
     color: var(--font-color);
     font-size: 25px;
+    line-height: 40px;
 }
 .portfolio h3 {
     font-size: 55px;
@@ -329,24 +345,21 @@
 }
 
 .port-container{
-  padding: 60px;
+    padding: 60px;
     margin-left: 90px;
     margin-top: 30px;
 }
 
 .port-card {
-    width: 370px;
-    height: 150px;
+     width: 420px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: left;
     margin-left: 80px;
-    padding: 25px;
+    padding: 25px 40px;
     font-family: 'Montserrat', sans-serif;
-    border-radius: 10px;
+    border-radius: 8px;
     margin-top: -50px;
     position: relative;
-    /* z-index: 9999; */
-    /* overflow: hidden; */
     background-color: #ffffff;
 }
 .port-card h5{
@@ -362,26 +375,29 @@
     letter-spacing: 0.5px;
 }
 
+        /* --------portfolio css end --------- */
+
+
 
             /* ------------pricing tab css---------- */
 
  .pricing-head h5{
  color: var(--font-color);
-    margin-left: 40px;
+    margin-left: 67px;
     font-size: 20px;
 }    
 
 .pricing-head h3 {
     color: #333333;
     font-weight: bold;
-    margin-left: 40px;
+    margin-left: 67px;
     font-size: 50px ;
     
  }
 
  .col-price {
     padding: 30px;
-    background-color: #ffffff;
+    background-color: var(--bg-color);
     border-radius: 10px;
 }
 
@@ -392,7 +408,7 @@
 .col-price .card-body{
     border: none;
     box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.3);
-    background-color: #ffffff;
+    background-color: var(--bg-color);
     /* padding: 20px; */
     border-radius: 10px;
     
@@ -469,6 +485,11 @@
 .card-body.price-cblack ul li {
     color: #ffffff;
 }
+
+/* ----------- pricing tab css end -------- */
+
+
+        /* --------testmonial css ------- */
 .test {
     padding: 160px 0;
     background: linear-gradient(rgba(5, 4, 4, 0.69), rgba(5, 4, 4, 0.74)), url(./Assets/test.jpeg) no-repeat fixed;
@@ -515,6 +536,11 @@
     
 }
 
+        /* -------testmonial end-------- */
+
+        
+        /* ------------contact css---------- */
+
 .contact {
     text-align: center;
 }
@@ -535,8 +561,11 @@
      letter-spacing: 0.5px;
     line-height: 28px;
     
-}
+}           
+            /* ---------- contact css  end ------- */
 
+
+            /* ----- social - icons  css------- */
 .social-icons{
     text-align: center;
     border-radius: 50%;
@@ -556,3 +585,4 @@
     background-color: #ff5252;
 }
 
+        /* -------social icons css end -------- */
