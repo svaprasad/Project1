@@ -215,8 +215,9 @@ let colors = ["green", "skyblue", "red", "blue"]; // Array
 console.log(colors[3]);
 
 
+let name = "raja";
 
-
+console.log(name="siva prasad");
 
 // let text = "Hello, World!";
 // document.getElementById("value").innerHTML = text;
