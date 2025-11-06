@@ -1,6 +1,6 @@
 
 
-// document.getElementById("demo") .innerHTML = "hi java script";
+
 
 
 
@@ -13,9 +13,13 @@
         console.log(text1); 
 
 
+
+
+
         
-// document.getElementById("demo").innerHTML = "<h2>Hello World</h2>";
-// document.getElementsByClassName("name:siva prasad").innerHTML = "<h3> Helloo oppty </h2>";
+document.getElementById("demo").innerHTML = "<h2>Hello World</h2>";
+
+document.getElementById("name").innerHTML = "<h3> Helloo oppty </h3>";
 
 
                 // ----------addition-----
@@ -223,6 +227,36 @@ console.log(name="siva prasad");
 // document.getElementById("value").innerHTML = text;
 // console.log(text); 
 
+
+const price1 = 5;
+const price2 = 6;
+let total = price1 + price2;
+
+console.log(total);
+
+
+
+
+
+
+
+// let colors1 = ["green", "skyblue", "red", "blue"]; // Array
+// let colors2 = ["green", "skyblue", "red", "blue"]; // Array
+// let colors3 = ["green", "skyblue", "red", "blue"]; // Array
+
+// console.log(colors2);
+
+const age = "25";
+
+console.log(age);
+
+const age1 = "25";
+
+console.log(age1);
+
+const age2 = "25";
+
+console.log(age2);
 
 
 

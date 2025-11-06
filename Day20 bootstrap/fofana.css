@@ -158,7 +158,7 @@
 }
             /* ---------- person image css ------------ */
 .person {
-    background: url(./Assets/Design.jpeg) center no-repeat;
+    background: url(./Assets/bg1-peoples.png) center no-repeat;
     /* background-color: none; */
     background-size: 100%;
     text-align: center;
@@ -512,6 +512,7 @@
     letter-spacing: 0.5px;
     line-height: 28px;
     color: #676576;
+    margin: 20px 20px 20px 20px;   
 }
 
 
@@ -532,6 +533,7 @@
 .right-icon i {
     margin-left: 10px;
     text-align: center;
+  
     
     
 }
