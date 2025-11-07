@@ -44,11 +44,13 @@
 // console.log(let1+let2);
 
 
+
 var city = "hyderabad";
 var age = "33";
 var country = "India";
 
 var city = "chennai"
+
 var age = "40"
 var country = "Usa"
 
