@@ -30,16 +30,23 @@
 
 
 let Country = "India";
-let Country2 = "chaina";
+let Country2 = "Usa";
 
-let Age = 17;
+let Age = 23;
 
-if(Age>= 18 && (Country == "India" || Country == "chaina")){
-    console.log("Allowed");
+// if(Age>= 18 && (Country == "India" || Country == "chaina")){
+//     console.log("Allowed");
+// }else{
+//     console.log("Not Allowed");
+// }
+
+
+
+if(Age>= 18 && (Country == "India" || Country == "Usa")){
+    console.log("allowed");
 }else{
-    console.log("Not Allowed");
+    console.log("not allowed");
 }
-
 
 // let c = 100;
 // let d = 200;
@@ -52,3 +59,20 @@ if(Age>= 18 && (Country == "India" || Country == "chaina")){
 
 // // console.log("total:", discount);
 // console.log("Total:", total, "Discount:", discount, "finalPrice:",finalPrice);
+
+
+ function calculateFinalPrice() {
+      let item1 = Number(document.getElementById("item1").value);
+      let item2 = Number(document.getElementById("item2").value);
+      let discount = Number(document.getElementById("discount").value);
+
+      let total = item1 + item2;
+      let discountAmount = total * (discount / 100);
+      let finalPrice = total - discountAmount;
+
+      document.getElementById("result").innerText =
+        "Final Price after discount: ₹" + finalPrice.toFixed(2);
+    }
+
+
+
