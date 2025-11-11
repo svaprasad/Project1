@@ -118,12 +118,20 @@ console.log("Your grade is: " + grade);
 // ----------Task4-----------
 
 // leap year
-let year= 2000;
+let year= 1000;
  
- if ((year % 4 == 0 && year % 100 !== 0) || (year % 400 == 0)) {
+ if (year % 4 === 0)
+   if (year % 100 === 0)
+      if (year % 400 === 0) {
             console.log(year + ' is a leap year');
             } else {
             console.log(year + ' is not a leap year');
+            }else{
+              console.log(year + ' is a leap year');
+
+            }else{
+              console.log(year + ' is not a leap year');
+ 
             }
 
 
@@ -147,3 +155,7 @@ if(a>b && a>c ) {
 
 console.log("The largest number is: " + largest);
 // console.log("a = " + a + ", b = " + b + ", c = " + c,"The largest number is: " + largest);
+
+
+
+
