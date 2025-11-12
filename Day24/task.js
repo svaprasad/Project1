@@ -88,50 +88,49 @@ if(age<=13){
 
 
 // let marks = prompt("Enter your marks:");
-marks = Number(55); // convert input to number
+//  // convert input to number
 
 // let grade;
 
-switch (true) {
-  case (marks >= 90 && marks <= 100):
-    grade = "A+";
-    break;
-  case (marks >= 75 && marks <= 89):
-    grade = "A";
-    break;
-  case (marks >= 60 && marks <= 74):
-    grade = "B";
-    break;
-  case (marks >= 45 && marks <= 59):
-    grade = "C";
-    break;
-  case (marks < 45 && marks >= 0):
-    grade = "Fail";
-    break;
-  default:
-    grade = "Invalid marks";
-}
+console.log("Grade Calculator:");
+let marks= 100;                   // change marks to see Output: Grade changing.
+console.log("Taken-Marks:", marks);
 
-console.log("Your grade is: " + grade);
-
-
+if(marks >=90 && marks <=100){
+            console.log("Grade: A+");
+        }else if(marks >=75 && marks <=89){
+            console.log("Grade: A");
+        }else if(marks >=60 && marks <=74){
+            console.log("Grade: B");
+        }else if(marks >=45 && marks <=59){
+            console.log("Grade: C");
+        }else if(marks <45){
+            console.log("Grade: Fail");
+        }else{
+            console.log("Invalid Marks");  // If you don't mention anything in marks Output: Shows invalid marks. 
+        }
 // ----------Task4-----------
 
 // leap year
-let year= 1000;
  
- if (year % 4 === 0)
-   if (year % 100 === 0)
-      if (year % 400 === 0) {
-            console.log(year + ' is a leap year');
-            } else {
-            console.log(year + ' is not a leap year');
-            }else{
-              console.log(year + ' is a leap year');
+            // Year divisible by 4
+            // Year not divisible by 100
+            // Unless it is also divisible by 400
 
-            }else{
-              console.log(year + ' is not a leap year');
- 
+           let year = 2000;
+
+            if(year % 4 === 0){
+                if(year % 100 === 0){
+                    if(year % 400 === 0){
+                        console.log(year+ " is a Leap Year" );
+                    }else{
+                        console.log(year+ " is Not a Leap Year");
+                    }
+                } else{
+                    console.log(year+ " is a Leap Year");
+                }
+            } else{
+                console.log(year+ " is Not a Leap Year");
             }
 
 
