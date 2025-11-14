@@ -67,6 +67,8 @@ for(let p=1; p<=5; p++){
             }
                  console.log("        Avialable Sizes In Red:  ")
 
+               
+
             console.log(`${colors[0]} = ${sizes[0]}`); 
             console.log(`${colors[0]} = ${sizes[1]}`);
             console.log(`${colors[0]} = ${sizes[2]}`);
