@@ -14,7 +14,7 @@
 
 // 6. Move all zeros to the end of the array
 // a. Input [1,0,5,0,9], Output [1,5,9,0,0]
-
+f
 
 
        // Task1 pass or fail Task
