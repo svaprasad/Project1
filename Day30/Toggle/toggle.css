@@ -1,0 +1,36 @@
+    /* Task   
+Light/ Dark Mode Toggle */
+
+    body {
+        font-family: Arial, sans-serif;
+        transition: background 0.4s, color 0.4s;
+        text-align: center;
+        padding-top: 50px;
+    }
+       
+       
+       /* Light Mode */
+    body.light {
+        background: #ffffff;
+        color: #000000;
+    }
+
+    /* Dark Mode */
+    body.dark {
+        background: #1a1a1a;
+        color: #ffffff;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        border: none;
+        border-radius: 6px;
+        background: #007bff;
+        color: white;
+    }
+
+    button:hover {
+        background: #0056b3;
+    }

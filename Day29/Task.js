@@ -5,12 +5,19 @@
 
      console.log("          Remove duplicates from the array  ")
 
-let array = [1,2,3,2,4,3,5];
+// let array = [1,2,3,2,4,3,5];
 
 
-let UniqueArray = [...new Set(array)];
+// let UniqueArray = [...new Set(array)];
 
-console.log(UniqueArray);
+// console.log(UniqueArray);
+
+
+        let num = [1,2,3,2,4,3,5];
+        let nums = num.filter((a, index) => { 
+            return num.indexOf(a) === index; 
+        });
+        console.log("RemovingAfterDuplicateValues:",nums);
 
 
 
