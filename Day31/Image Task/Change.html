@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Image on click</title>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Click on Image to Change</h2>
+
+    <img id="box" src="./Assets2/mashrooms.jpg" alt="" width="300px" />
+
+    <script>
+      const box = document.getElementById("box");
+      box.addEventListener("click", function () {
+        box.src = "./Assets2/rabbit.jpg";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter Increased or Decreased</title>
+
+    <!-- Task
+    Make a counter using 2 buttons (+(Increase the value), - (decrease the value)) -->
+
+    <style>
+      body {
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      #increase {
+        padding: 12px;
+        background-color: rgb(175, 222, 36);
+        border-radius: 10px;
+        border: none;
+      }
+
+      #increase:hover {
+        background-color: greenyellow;
+      }
+
+      #decrease {
+        padding: 12px;
+        background-color: rgb(236, 66, 64);
+        border-radius: 10px;
+        border: none;
+      }
+
+      #decrease:hover {
+        background-color: rgb(245, 149, 108);
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Counter: <span id="value">0</span></h2>
+
+    <button id="increase">Increase +</button> &nbsp;
+    <button id="decrease">Decrease -</button>
+
+    <script>
+      let value = 0;
+
+      document
+        .getElementById("increase")
+        .addEventListener("click", function () {
+          value++;
+
+          document.getElementById("value").textContent = value;
+        });
+
+      document
+        .getElementById("decrease")
+        .addEventListener("click", function () {
+          value--;
+          document.getElementById("value").textContent = value;
+        });
+    </script>
+  </body>
+</html>
