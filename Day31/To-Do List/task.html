@@ -5,54 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      #list,h2 {
+      #list,
+      h2 {
         margin-left: 300px;
         font-size: 30px;
       }
 
-      #task{
+      #task {
         margin-left: 300px;
         padding: 15px;
         font-size: 20px;
         border-color: black;
       }
-     #addbtn {
-          padding: 16px 25px;
-          font-size: 18px;
+      #addbtn {
+        padding: 16px 25px;
+        font-size: 18px;
       }
       button {
         padding: 10px;
         font-size: 16px;
       }
-      
     </style>
-
   </head>
   <body>
-
     <h2>Build a small to-do list (add/delete)</h2>
 
-    <input id="task" placeholder="Enter task">
-<button onclick="addTask()" id="addbtn">Add</button>
+    <input id="task" placeholder="Enter task" />
+    <button onclick="addTask()" id="addbtn">Add</button>
 
-<ul id="list"></ul>
+    <ul id="list"></ul>
 
-      <!-- script js  -->
+    <!-- script js  -->
 
+    <script>
+      function addTask() {
+        let task = document.getElementById("task").value;
+        if (task === "") return;
 
-<script>
-    function addTask() {
-  let task = document.getElementById("task").value;
-  if (task === "") return;
+        let li = document.createElement("li");
+        li.innerHTML =
+          task +
+          " &nbsp <button onclick='this.parentElement.remove()'>Delete</button>";
+        li.style.margin = "8px 0";
+        li.style.color = "red";
 
-  let li = document.createElement("li");
-  li.innerHTML = task + " &nbsp <button onclick='this.parentElement.remove()'>Delete</button>";
-  li.style.margin = "8px 0"; 
-  li.style.color = "red";
-
-  document.getElementById("list").appendChild(li);
-  document.getElementById("task").value = "";
-}
-</script>
+        document.getElementById("list").appendChild(li);
+        document.getElementById("task").value = "";
+      }
+    </script>
   </body>
 </html>
