@@ -182,3 +182,25 @@ function fahrenheitToCelsius(fahrenheit) {
 
 console.log(CelsiusToFahrenheit(32)); 
 console.log(fahrenheitToCelsius(98)); 
+
+
+
+
+
+let marks = 85;
+
+if (marks >= 35) {
+    console.log("Pass Buji");
+
+    if (marks >= 75) {
+        console.log("Distinction Buji!");
+    }
+} else {
+    console.log("Fail Buji");
+}
+
+
+for (i=1; i<=5; i++){
+
+    console.log("bujji" + i)
+}

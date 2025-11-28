@@ -1,0 +1,123 @@
+body{
+    font-family: "Marcellus", serif;
+    letter-spacing: 0.03rem;
+    background-color:rgb(241 241 240);
+   
+}
+
+.head-cont {
+       background-color: #b8b6b6c0;
+       z-index: 1;
+
+}
+
+.logo a {
+    margin-left: -50px;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.tabs li a {
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-align: center;
+    margin-left: 30px;
+    color: rgba(0, 0, 0, 0.65);
+    display: block;
+}
+
+.wishlist {
+    display: flex;
+}
+
+.coll-cont {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.coll-cont h1 {
+    font-size: 72px;
+    color: #111;
+}
+.coll-cont p {
+     font-family: "Jost", sans-serif;
+     font-size: 18px;
+     margin: 0px 0px 16px;
+     color: #8f8f8f;
+     margin-top: 20px;
+}
+
+.col img{
+    width: 300px;
+}
+
+/* .col img:hover{
+ 
+        transform: scale(1);
+ 
+} */
+
+.soft-head {
+    margin-left: -48px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-size: 22px;
+    color: #111;
+    
+
+}
+.col p {
+    margin: 10px;
+    color: #8f8f8f;
+}
+
+.col a{
+    /* text-align: left; */
+    color:#111;
+    margin-left: 20px;
+    float: left;
+    line-height: -10px;
+}
+
+.book-sec{
+    text-align: center;
+    margin-left: 89px;
+    justify-content: center;
+    box-sizing: border-box;
+   
+    
+}
+
+.book-sec i {
+    font-size: 35px;
+    color: #8f8f8f;
+}
+
+.book-inline{
+    gap:20px;
+    
+}
+.book-inline h4{
+    color: #111;
+}
+
+.book-inline p{
+    color: #8f8f8f;
+}
+
+/* .col-4 img{
+    width: 300px;
+    display: flex;
+
+} */
+
+.dark-bg {
+    background-color: #fff;
+    
+}
+
+.content3 {
+    background-color: #fff;
+}
+

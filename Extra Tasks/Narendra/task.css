@@ -1,0 +1,211 @@
+
+    body {
+        margin: 0;
+        font-family: Arial;
+        background: #f4f4f4;
+    }
+
+    /* HEADER */
+    .header {
+        background: #ffffff;
+        padding: 25px 40px;
+        border-bottom: 1px solid #ddd;
+        position: fixed;
+        width: 100%;
+        
+        
+    }
+    .header-left {
+        float: left;
+        font-weight: bold;
+        color: #1a4ea0;
+        font-size: 25px;
+    }
+    .header-right {
+        /* float: right; */
+        text-align: right;
+        margin-right: 70px;
+       
+        
+    }
+    .header-right a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: #444;
+    }
+    .btn-blue {
+        background: #1a4ea0;
+        padding: 5px 12px;
+        color: white;
+        border-radius: 5px;
+    }
+
+    /* CLEAR FLOAT */
+    .clear { clear: both; }
+
+    /* HERO SECTION */
+    .hero {
+        background: #e7e8ec;
+        padding: 90px;
+        display: flex;
+    }
+    .hero-left {
+        /* width: 50%; */
+        /* float: left; */
+        margin-left: 120px;
+        
+    }
+    .hero-right {
+      
+        /* float: right; */
+        /* text-align: right; */
+        margin-left: 30px;
+    }
+    .hero-box {
+    width: 330px;
+    height: 180px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff00cc, #b300ff, #5a7bff, #00e5ff);
+    }
+    .btn-yellow {
+        background: #ffb500;
+        padding: 8px 12px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    /* PROGRAMS */
+    .program-area {
+        text-align: center;
+        padding: 40px 0;
+        background: #c3bfbe;
+    }
+
+    .program-boxes {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .program {
+        width: 250px;
+        background: white;
+        margin: 20px;
+        display: inline-block;
+        text-align: left;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .p-top {
+      
+        color: white;
+        font-size: 30px;
+       height: 50px;
+        font-weight: bold;
+    }
+
+
+    .eng { background: #ffaa22;
+             padding: 40px;
+     }
+    .biz {
+         background: #00b987; 
+           font-size: 40px;
+            padding: 40px;
+        }
+    .art { 
+        background: #8f5cff;
+        font-size: 70px;
+          padding: 40px;
+     }
+
+     .p-body {
+        padding: 25px;
+        padding-top: 10px;
+        font-size: 14px;
+    } 
+
+    .p-body h3{
+        color: #1a4ea0;
+    }
+
+    .p-btn {
+        
+        font-size: 15px;
+        border: none;
+        background-color: #fff;
+        margin-top: 10px;
+        color: #1a4ea0;
+        padding-left: 1px;
+
+    }
+
+    /* STUDENT LIFE */
+    .student-section {
+        padding: 50px;
+        background: #e7e8ec;
+   
+    }
+    .student-left {
+         width: 40%;
+        float: left; 
+        
+    }
+    .student-right {
+        width: 55%; 
+        float: right;
+        
+    }
+
+    .student-right h2{
+        color: #1a4ea0;
+    }
+    .student-right li {
+        font-size: 16px;
+        line-height: 25px;
+        list-style: none;
+    }
+    .student-right li::before {
+        content: ' ✔';
+        color: green;
+        padding: 10px;
+    }
+
+    .student-box {
+        background: #ff4fa3;
+        color: white;
+        width: 300px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 35px;
+        border-radius: 5px;
+        margin-left: 140px;
+    }
+
+    /* FOOTER */
+    footer {
+        background: #0f3b87;
+        color: white;
+        padding: 40px;
+        margin-top: 40px;
+        text-align: center;
+        
+    }
+    footer .col {
+        width: 30%;
+        float: left;
+       justify-content: center;
+       
+    }
+    footer p, footer a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 22px;
+        
+    }
+
+  
