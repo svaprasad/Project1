@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Signal (Red, Yellow and Green)</title>
+    <style>
+        body{
+            background-color: rgb(208, 182, 117);
+        }
+
+        .signal{
+            width: 400px;
+            height: 180px;
+            display: flex;
+            background:black;
+            border-radius: 10px;
+            margin: auto;
+            margin-top: 120px;
+           
+        }
+        .red{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: darkred;
+            margin: 50px auto;
+        }
+        .yellow{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: darkgoldenrod;
+            margin: 10px auto;
+            margin-top: 50px; 
+           
+        }
+        .green{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: darkgreen;
+            margin: 10px auto;
+            margin-top: 50px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="signal">
+        <div class="red" id="redlight"> </div>
+        <div class="yellow" id="yellowlight"> </div>
+        <div class="green" id="greenlight"> </div>
+    </div>
+
+    <script>
+        function showRed(){
+            document.getElementById('redlight').style.background="red";
+            document.getElementById('yellowlight').style.background="darkgoldenrod";
+            document.getElementById('greenlight').style.background="darkgreen";
+            
+            setTimeout(showYellow,3000);
+        }
+        function showGreen(){
+            document.getElementById('redlight').style.background="darkred";
+            document.getElementById('yellowlight').style.background="darkgoldenrod";
+            document.getElementById('greenlight').style.background="lime";
+            
+            setTimeout(showRed,3000);
+        }
+        function showYellow(){
+            document.getElementById('redlight').style.background="darkred";
+            document.getElementById('yellowlight').style.background="yellow";
+            document.getElementById('greenlight').style.background="darkgreen";
+            
+            setTimeout(showGreen,2000);
+        }
+        showRed();
+    </script>
+</body>
+</html>
