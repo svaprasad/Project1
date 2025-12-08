@@ -1,0 +1,141 @@
+<!-- Complete Same‑to‑Same HTML & CSS Layout (Images Required From User Uploads) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cryptous</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    :root{
+        --purple-dark:#0d0226;
+        --purple-mid:#3b0b74;
+        --purple-light:#7a24cf;
+        --text-light:#ffffff;
+        --text-dim:#cfc8dd;
+        --green:#00ff8f;
+        --red:#ff4d4d;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif;}
+    body{background:#f0f0f0;display:flex;justify-content:center;}
+    .wrap{width:100%;max-width:1280px;background:#0f0036;min-height:100vh;}
+
+    /* HEADER */
+    header{display:flex;justify-content:space-between;align-items:center;padding:25px 50px;color:white;}
+    header .left{display:flex;align-items:center;gap:10px;}
+    header img{width:50px;}
+    header nav a{color:white;margin:0 12px;font-size:15px;text-decoration:none;}
+    header .trade{border:2px solid #ff955c;padding:8px 18px;border-radius:20px;color:white;text-decoration:none;font-size:14px;}
+
+    /* HERO */
+    .hero{padding:70px 60px 140px;background:linear-gradient(180deg,#31006b,#140039);color:white;position:relative;}
+    .hero h1{font-size:48px;font-weight:700;line-height:1.2;width:60%;}
+    .hero p{margin-top:15px;font-size:16px;color:#dcd3e8;width:55%;}
+    .hero button{background:#ff955c;padding:12px 26px;border:none;border-radius:20px;color:white;font-size:15px;margin-top:25px;cursor:pointer;}
+    .hero .coin-img{position:absolute;right:80px;top:40px;width:360px;}
+
+    .scroll-icon{position:absolute;left:50%;transform:translateX(-50%);bottom: -40px;font-size:40px;color:white;}
+
+    /* TABLE SECTION */
+    .table-section{background:#160047;padding:100px 60px;color:white;}
+    .table-section h2{text-align:center;font-size:32px;margin-bottom:50px;}
+
+    table{width:100%;border-collapse:collapse;color:white;font-size:15px;}
+    thead{color:#d6ccef;font-size:14px;}
+    th,td{padding:14px 10px;text-align:left;border-bottom:1px solid #331060;}
+    td img{width:95px;}
+    .green{color:var(--green);} 
+    .red{color:var(--red);} 
+
+    .logo-small{width:25px;margin-right:8px;vertical-align:middle;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+    <!-- HEADER -->
+    <header>
+        <div class="left">
+            <img src="logo.png" alt="logo" />
+            <h2>Cryptous</h2>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Company</a>
+            <a href="#">About</a>
+            <a href="#">Pricing</a>
+            <a href="#">Team</a>
+            <a href="#">Contact</a>
+            <a href="#">Blog</a>
+        </nav>
+        <a class="trade" href="#">Trade Now</a>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Make better business <br> with Cryptocurrency</h1>
+        <p>We offers users a fully operational long‑term rental platform. It plans to leverage blockchain technology.</p>
+        <button>Get Whitelisted</button>
+
+        <img src="coin.png" class="coin-img" />
+       
+    </section>
+
+    <!-- TABLE -->
+    <section class="table-section">
+        <h2>Today's Cryptocurrency Prices</h2>
+
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>24h %</th>
+                <th>7d %</th>
+                <th>Market Cap</th>
+                <th>Volume(24h)</th>
+                <th>Last 7 Days</th>
+            </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><img src="logo.png" class="logo-small"> Bitcoin BTC</td>
+                    <td>$55,206.61</td>
+                    <td class="green">+0.92%</td>
+                    <td class="green">+15.86%</td>
+                    <td>$1,046,899,935,348</td>
+                    <td>$953,482 BTC</td>
+                    <td><img src="up-green.png" /></td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td><img src="logo.png" class="logo-small"> Ethereum ETH</td>
+                    <td>$55,206.61</td>
+                    <td class="red">-0.92%</td>
+                    <td class="green">+15.86%</td>
+                    <td>$1,046,899,935,348</td>
+                    <td>$953,482 BTC</td>
+                    <td><img src="up-green.png" /></td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td><img src="logo.png" class="logo-small"> Cardano ADA</td>
+                    <td>$55,206.61</td>
+                    <td class="green">+0.92%</td>
+                    <td class="red">-15.86%</td>
+                    <td>$1,046,899,935,348</td>
+                    <td>$953,482 BTC</td>
+                    <td><img src="up-red.png" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
+</body>
+</html>
