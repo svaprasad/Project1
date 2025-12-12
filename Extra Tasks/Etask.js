@@ -59,3 +59,72 @@ var country = "nepal"
 let village = "kadapa" 
 
 console.log(village);
+
+
+
+let n =100;
+let sum =0;
+for(let i=1; i<=n; i++){
+    sum = sum + i
+}
+
+console.log(sum);
+
+
+
+let k =100;
+
+let total =0;
+
+for( i=1; i<=k; i++){
+
+    total = total +i 
+}
+console.log(total);
+
+
+
+
+
+// let numbers = [10, 55, 60, 22, 80];
+
+// let result = numbers.filter(function(value) {
+//     return value > 50;
+// });
+
+// console.log(result);  
+
+
+
+// let number = [  10, 55, 60, 22, 80]
+//         let resul = [];
+//         for (let i = 0; i < numbers.length; i++) {
+//             if (numbers[i] > 50) {
+//                 result.push(numbers[i]);
+//             }
+//         }   
+//         console.log(result);
+
+
+
+//         let numbers = [10, 55, 60, 22, 80];
+
+// let smallest = Math.min(...numbers);
+
+// console.log(smallest); 
+
+
+let numbers = [10, 55, 60, 22, 80];
+
+let smallest = numbers[0];
+
+for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] < smallest) {
+        smallest = numbers[i];
+    }
+}
+
+console.log(smallest); 
+
+
+let 
