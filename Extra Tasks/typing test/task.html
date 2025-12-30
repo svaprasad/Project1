@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Professional Typing Test</title>
+  <style>
+    *{ box-sizing:border-box; }
+
+    body{
+      font-family: "Poppins", "Segoe UI", sans-serif;
+      background: linear-gradient(120deg, #98f48e, #98f393);
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      margin:0;
+    }
+
+    .box{
+      width:400px;
+      background:#ffffff;
+      padding:26px;
+      border-radius:18px;
+      box-shadow:0 20px 50px rgba(0,0,0,0.18);
+      animation: fadeIn 0.6s ease-in-out;
+    }
+/* 
+    @keyframes fadeIn{
+      from{ opacity:0; transform:translateY(20px); }
+      to{ opacity:1; transform:translateY(0); }
+    } */
+
+    h4{
+      text-align:center;
+      margin-bottom:20px;
+      color:#2d3436;
+      font-size:22px;
+      font-weight:600;
+      letter-spacing:0.8px;
+    }
+
+    .given{
+      background:linear-gradient(135deg,#eef2f3,#dfe9f3);
+      padding:16px;
+      font-size:14px;
+      margin-bottom:16px;
+      line-height:1.7;
+      border-radius:10px;
+      color:#2f3640;
+      border:1px dashed #74b9ff;
+    }
+
+    .time{
+      text-align:center;
+      font-weight:600;
+      margin-bottom:14px;
+      color:#d63031;
+      font-size:15px;
+    }
+
+    textarea{
+      width:100%;
+      height:110px;
+      padding:12px;
+      border-radius:10px;
+      border:1px solid #dcdde1;
+      resize:none;
+      font-size:14px;
+      outline:none;
+      transition:0.3s;
+      background:#fafafa;
+    }
+
+    textarea:focus{
+      border-color:#ff7675;
+      box-shadow:0 0 0 3px rgba(255,118,117,0.2);
+      background:#ffffff;
+    }
+
+    button{
+      width:100%;
+      margin-top:16px;
+      padding:12px;
+      background:linear-gradient(135deg,#ff7675,#fd79a8);
+      color:#fff;
+      border:none;
+      border-radius:12px;
+      font-size:15px;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      transform:scale(1.03);
+      box-shadow:0 10px 25px rgba(253,121,168,0.45);
+    }
+
+    #result{
+      margin-top:16px;
+      background:linear-gradient(135deg,#fdfbfb,#ebedee);
+      padding:14px;
+      border-radius:10px;
+      text-align:center;
+      font-weight:600;
+      font-size:14px;
+      color:#2d3436;
+      line-height:1.7;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h4>2 Min Typing Test</h4>
+
+  <div class="given" id="givenText">
+    JavaScript is a popular language used to create interactive websites.
+    Science is the pursuit and application of knowledge and understanding of the natural and social world following a systematic methodology based on evidence.
+    Science topics cover vast areas like Physics, Chemistry, Biology, Earth Science, Astronomy, Computer Science, and Health/Medicine.
+  </div>
+
+  <p class="time">Time Left: <span id="time">120</span> sec</p>
+
+  <textarea id="area" placeholder="Type the above text..." disabled></textarea>
+
+  <button onclick="start()">Start Test</button>
+
+  <p id="result"></p>
+</div>
+
+<script>
+  let time = 120;
+  let interval;
+
+  const givenText = document.getElementById("givenText").innerText;
+
+  function start(){
+    const area = document.getElementById("area");
+    area.disabled = false;
+    area.value = "";
+    document.getElementById("result").innerHTML = "";
+    time = 120;
+    document.getElementById("time").innerHTML = time;
+
+    if(interval) clearInterval(interval);
+
+    interval = setInterval(function(){
+      time--;
+      document.getElementById("time").innerHTML = time;
+      if(time === 0){
+        clearInterval(interval);
+        finish();
+      }
+    },1000);
+  }
+
+  function finish(){
+    const typedText = document.getElementById("area").value.trim();
+    const words = typedText === "" ? 0 : typedText.split(" ").length;
+    const wpm = Math.round(words / 2);
+    const accuracy = typedText.length > 0
+      ? Math.round((typedText.length / givenText.length) * 100)
+      : 0;
+
+    document.getElementById("area").disabled = true;
+
+    document.getElementById("result").innerHTML =
+      `Words Typed: ${words}<br>Speed: ${wpm} WPM<br>Accuracy: ${accuracy}%`;
+  }
+</script>
+
+</body>
+</html>

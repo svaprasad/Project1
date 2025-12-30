@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Typing Test</title>
+    <style>
+      body {
+        background: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(9, 9, 121, 1) 35%,
+          rgba(0, 212, 255, 1) 100%
+        );
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 600px;
+        margin: 0;
+      }
+      .outer-box {
+        background-color: olivedrab;
+        border: 4px solid black;
+        border-radius: 12px;
+        padding: 20px;
+        width: 600px;
+        text-align: center;
+      }
+      h1 {
+        font-size: 40px;
+        color: gold;
+      }
+      #startBtn,
+      #resetBtn {
+        background-color: black;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        margin: 5px;
+        cursor: pointer;
+      }
+      #startBtn {
+        color: #22c55e;
+      }
+      #resetBtn {
+        color: goldenrod;
+      }
+      #timer {
+        color: #ef4444;
+        font-size: 20px;
+        font-weight: 600;
+      }
+      #quote {
+        margin: 20px;
+        padding: 10px;
+        border: 2px solid goldenrod;
+        border-radius: 5px;
+        background: rgb(151, 151, 151);
+        font-weight: 600;
+        line-height: 1.6;
+      }
+      textarea {
+        width: 100%;
+        height: 100px;
+        margin-top: 10px;
+        border: 2px solid goldenrod;
+        border-radius: 5px;
+        background-color: rgb(20, 20, 20);
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .done {
+        color: white;
+        font-weight: 600;
+        margin-top: 25px;
+      }
+
+      /* Stats horizontal layout */
+      .stats {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        margin-top: 25px;
+      }
+      .card {
+        flex: 1;
+        background: #e5e5e5;
+        border: 2px solid #000;
+        border-radius: 8px;
+        padding: 10px;
+        text-align: center;
+      }
+      .label {
+        font-size: 14px;
+        font-weight: 600;
+        color: #1e40af;
+      }
+      .value {
+        margin-top: 6px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer-box">
+      <h1>Typing Test</h1>
+
+      <div class="controls">
+        <button id="startBtn">Start</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+
+      <p><b>Time left:</b> <span id="timer">120</span> <b>seconds</b></p>
+
+      <div id="quote">
+        Typing is a practical skill that improves with deliberate practice and
+        patience.
+      </div>
+
+      <textarea
+        id="input"
+        placeholder="Start typing here..."
+        disabled
+      ></textarea>
+
+      <!-- Stats UI only (no functionality) -->
+      <div class="stats">
+        <div class="card">
+          <div class="label">WPM</div>
+          <div class="value">0</div>
+        </div>
+        <div class="card">
+          <div class="label">Accuracy</div>
+          <div class="value">100%</div>
+        </div>
+        <div class="card">
+          <div class="label">Characters</div>
+          <div class="value">0</div>
+        </div>
+        <div class="card">
+          <div class="label">Errors</div>
+          <div class="value">0</div>
+        </div>
+      </div>
+
+      <p id="resultMsg" class="done"></p>
+    </div>
+
+    <script>
+      const DURATION = 120;
+      const TEXT = document.getElementById("quote").innerText.trim();
+
+      let timeLeft = DURATION;
+      let timer;
+      let startTime;
+
+      const startBtn = document.getElementById("startBtn");
+      const resetBtn = document.getElementById("resetBtn");
+      const timerEl = document.getElementById("timer");
+      const inputEl = document.getElementById("input");
+      const resultMsg = document.getElementById("resultMsg");
+
+      // stats elements
+      const wpmEl = document.querySelector(".card:nth-child(1) .value");
+      const accEl = document.querySelector(".card:nth-child(2) .value");
+      const charEl = document.querySelector(".card:nth-child(3) .value");
+      const errEl = document.querySelector(".card:nth-child(4) .value");
+
+      function resetAll() {
+        clearInterval(timer);
+        timeLeft = DURATION;
+        timerEl.textContent = timeLeft;
+        inputEl.value = "";
+        inputEl.disabled = true;
+        resultMsg.textContent = "";
+
+        // reset dummy stats
+        wpmEl.textContent = "0";
+        accEl.textContent = "100%";
+        charEl.textContent = "0";
+        errEl.textContent = "0";
+        startTime = null;
+      }
+
+      startBtn.addEventListener("click", () => {
+        resetAll();
+        inputEl.disabled = false;
+        inputEl.focus();
+        startTime = Date.now();
+
+        timer = setInterval(() => {
+          timeLeft--;
+          timerEl.textContent = timeLeft;
+          if (timeLeft <= 0) {
+            clearInterval(timer);
+            inputEl.disabled = true;
+            resultMsg.textContent = "⏰ Time is up!";
+          }
+        }, 1000);
+      });
+
+      resetBtn.addEventListener("click", resetAll);
+
+      // very simple beginner logic
+      inputEl.addEventListener("input", () => {
+        const typed = inputEl.value;
+        charEl.textContent = typed.length; // characters
+
+        // simple error count
+        let errors = 0;
+        for (let i = 0; i < typed.length; i++) {
+          if (typed[i] !== TEXT[i]) {
+            errors++;
+          }
+        }
+        errEl.textContent = errors;
+
+        // simple accuracy
+        let accuracy =
+          typed.length > 0
+            ? Math.round(((typed.length - errors) / typed.length) * 100)
+            : 100;
+        accEl.textContent = accuracy + "%";
+
+        // simple wpm
+        let minutes = startTime ? (Date.now() - startTime) / 60000 : 0;
+        let wpm = minutes > 0 ? Math.round(typed.length / 5 / minutes) : 0;
+        wpmEl.textContent = wpm;
+
+        // finish when full text typed
+        if (typed === TEXT) {
+          clearInterval(timer);
+          inputEl.disabled = true;
+          resultMsg.textContent = "✅ Typing completed!";
+        }
+      });
+    </script>
+  </body>
+</html>
