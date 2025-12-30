@@ -1,4 +1,4 @@
-/* RESET */
+
 * {
   margin: 0;
   padding: 0;
@@ -289,3 +289,150 @@
   padding-left: 60px;
 }
 
+@media (max-width: 1200px) {
+
+  /* HEADER */
+  .bridge-header {
+    padding: 20px 30px;
+  }
+
+  .menu {
+    gap: 22px;
+  }
+
+  /* HERO */
+  .bridge-hero {
+    min-height: 80vh;
+  }
+
+  /* FLOATING CTA */
+  .floating-cta {
+    right: 10px;
+    top: 65%;
+  }
+
+  /* BRANDS SECTION */
+  .brandsSection {
+    padding: 80px 40px;
+  }
+
+  .brandsTitle {
+    font-size: 36px;
+    margin-bottom: 60px;
+  }
+
+  .brandsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .brandItem {
+    height: 110px;
+  }
+
+  /* FOOTER */
+  .bridge-footer-wrap {
+    padding: 60px 40px 0;
+  }
+
+  .bridge-footer-services {
+    gap: 50px;
+  }
+
+  .bridge-footer-bottom {
+    gap: 60px;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* HEADER */
+  .bridge-header {
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  /* HERO */
+  .bridge-hero {
+    min-height: 65vh;
+  }
+
+  /* FLOATING CTA – disable fixed */
+  .floating-cta {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    margin: 30px auto;
+  }
+
+  /* BRANDS SECTION */
+  .brandsSection {
+    padding: 60px 20px;
+  }
+
+  .brandsTitle {
+    font-size: 28px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .brandsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brandItem {
+    height: 100px;
+  }
+
+  .brandItem img {
+    max-width: 140px;
+  }
+
+  /* FOOTER */
+  .bridge-footer-wrap {
+    padding: 50px 20px 0;
+  }
+
+  .bridge-footer-top {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .bridge-footer-services {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .bridge-footer-bottom {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .bridge-footer-time {
+    padding-bottom: 60px;
+  }
+
+  .brx-footer-imageWrap {
+    height: 100px;
+  }
+
+  .brx-footer-copy {
+    padding: 30px 0;
+    text-align: center;
+  }
+
+}

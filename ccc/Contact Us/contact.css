@@ -342,3 +342,140 @@ hr {
   padding-top: 55px;
   padding-left: 60px;
 }
+
+
+
+@media (max-width: 1200px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Header spacing */
+  .header-inner {
+    padding: 20px 30px;
+  }
+
+  .nav-menu {
+    gap: 25px;
+  }
+
+  /* Main layout */
+  .contact-layout,
+  .contact-section {
+    min-height: auto;
+    height: auto;
+  }
+
+  .contact-left,
+  .contact-right {
+    padding: 60px 50px;
+  }
+
+  /* Reduce font sizes slightly */
+  .contact-left h1 {
+    font-size: 38px;
+  }
+
+  .info-text {
+    font-size: 16px;
+  }
+
+  /* Reduce gaps */
+  .bottom-info {
+    gap: 60px;
+  }
+
+  /* Floating CTA adjustment */
+  .floating-cta {
+    top: 65%;
+    right: 10px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Header stack */
+  .header-inner {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  /* Floating CTA disable fixed */
+  .floating-cta {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    margin: 30px 0;
+  }
+
+  /* Contact layout stack */
+  .contact-layout,
+  .contact-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  /* Map height */
+  .contact-right iframe {
+    height: 300px;
+  }
+
+  /* Text center */
+  .contact-left h1,
+  .contact-left p,
+  .info-text {
+    text-align: center;
+  }
+
+  .contact-left h1 {
+    font-size: 30px;
+  }
+
+  /* Email input full width */
+  .email-field {
+    width: 100%;
+  }
+
+  /* Bottom info stack */
+  .bottom-info {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* Footer links stack */
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Footer image + copyright */
+  .brx-footer-imageWrap {
+    height: 100px;
+  }
+
+  .brx-footer-copy {
+    padding: 30px 0;
+    text-align: center;
+  }
+
+}

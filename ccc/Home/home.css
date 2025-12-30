@@ -1,4 +1,4 @@
-/* Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -123,14 +123,14 @@ body {
 }
 
 .hero-side {
-  position: fixed;        /* PAGE మొత్తానికి FIX */
+  position: fixed;        
   right: 1px;            
-  top: 70%;               /* VERTICALLY CENTER */
+  top: 70%;               
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   gap: 16px;
-  z-index: 9999;          /* ALL CONTENT పైన ఉండడానికి */
+  z-index: 9999;          
 }
 
 /* STATS BOX */
@@ -679,22 +679,7 @@ body {
   grid-column: 2 / 3;
 }
 
-/* ===== RESPONSIVE ===== */
-/* @media (max-width: 1200px) {
-  .kw {
-    font-size: 64px;
-  }
-}
 
-@media (max-width: 768px) {
-  .fashion-keywords-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .kw {
-    font-size: 48px;
-  }
-} */
 
 
 
@@ -1242,3 +1227,232 @@ body {
 }
 
 
+/* ===================== LAPTOP ===================== */
+@media (max-width: 1200px) {
+
+  /* HEADER */
+  .header {
+    padding: 20px 40px;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 0 50px;
+    height: auto;
+    min-height: 80vh;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+  }
+
+  /* HOME PRODUCT SECTION */
+  .home-product-section {
+    height: auto;
+  }
+
+  /* FEATURED PRODUCTS GRID */
+  .fp-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* NEW COLLECTION */
+  .nc-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* KEYWORDS */
+  .kw {
+    font-size: 54px;
+  }
+
+  /* HC2 SECTION */
+  .hc2-title {
+    font-size: 72px;
+  }
+
+  .hc2-overlay-text {
+    font-size: 140px;
+  }
+
+  /* LOGO STRIP */
+  .logo-strip {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* HOME PRODUCT GRID */
+  #homeProductGrid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 30px;
+  }
+
+  /* STREET BANNER */
+  .streetHeading {
+    font-size: 40px;
+  }
+
+  /* FOOTER */
+  .bridge-footer-wrap {
+    padding: 50px 40px 0;
+  }
+
+  .bridge-footer-bottom {
+    gap: 60px;
+  }
+}
+
+/* ===================== MOBILE ===================== */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  .header {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* HERO */
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    height: auto;
+    background-position: center;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-side {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    margin-top: 30px;
+  }
+
+  /* PRODUCT HOVER SECTION */
+  .home-product-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hover-box {
+    width: 100%;
+    height: 60vh;
+  }
+
+  /* FEATURED PRODUCTS */
+  .fp-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* VIDEO HERO */
+  .video-hero-wrap {
+    height: 360px;
+  }
+
+  /* NEW COLLECTION */
+  .nc-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nc-title {
+    font-size: 32px;
+  }
+
+  /* KEYWORDS */
+  .fashion-keywords-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kw {
+    font-size: 42px;
+  }
+
+  /* HC2 SECTION */
+  #hc2-wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hc2-left-block,
+  .hc2-right-block {
+    width: 100%;
+  }
+
+  .hc2-right-block {
+    padding: 40px 20px;
+  }
+
+  .hc2-title {
+    font-size: 48px;
+  }
+
+  .hc2-overlay-text {
+    font-size: 90px;
+  }
+
+  /* LOGO STRIP */
+  .logo-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* HOME PRODUCT GRID */
+  #homeProductGrid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  /* STREET BANNER */
+  #streetBanner {
+    background-attachment: scroll;
+    height: auto;
+  }
+
+  .streetBannerContent {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .streetHeading {
+    font-size: 32px;
+  }
+
+  /* BRAND SLIDER */
+  #brandSliderSection {
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+
+  /* FOOTER */
+  .bridge-footer-top {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .bridge-footer-services {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .bridge-footer-bottom {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .bridge-footer-wrap {
+    padding: 40px 20px 0;
+  }
+
+  .brx-footer-copy {
+    padding-left: 20px;
+    padding-top: 30px;
+  }
+}
