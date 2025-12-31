@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: #ffffff;
+}
+
+/* SECTION */
+.guide-section {
+  padding: 180px 0 160px;
+}
+
+/* WRAPPER */
+.guide-wrapper {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 70px;
+  display: flex;
+  gap: 110px;
+}
+
+/* LEFT */
+.guide-left {
+  flex: 1;
+  padding-top: 120px;
+}
+
+.guide-title {
+  font-size: 72px;
+  line-height: 1.08;
+  letter-spacing: 3px;
+  font-weight: 500;
+  margin-bottom: 48px;
+}
+
+.guide-para {
+  max-width: 460px;
+  font-size: 22px;
+  line-height: 1.9;
+  color: #9a9a9a;
+  margin-bottom: 64px;
+}
+
+.guide-btn {
+  display: inline-block;
+  background: #c2a3d1;
+  color: #fff;
+  padding: 22px 58px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+/* RIGHT */
+.guide-right {
+  flex: 1.35;
+  position: relative;
+}
+
+/* IMAGE AS BACKGROUND */
+.guide-image {
+  width: 100%;
+  height: 300px;
+  background: url("./home-iamge-1.jpg") center / cover no-repeat;
+}
+
+/* CARDS */
+.guide-cards {
+  display: flex;
+  gap: 30px;
+  margin-top: -120px;
+  padding-left: 20px;
+}
+
+.guide-card {
+  background: #e9eaec;
+  width: 250px;
+  text-align: center;
+  padding: 44px 22px 38px;
+}
+
+/* STEP TITLE */
+.guide-card h4 {
+  font-size: 26px;
+  margin-bottom: 26px;
+}
+
+/* ICON */
+.card-icon {
+  width: 82px;
+  height: 82px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 0 auto 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon img {
+  width: 36px;
+}
+
+/* TEXT */
+.guide-card p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #8f8f8f;
+  padding: 0 14px;
+}

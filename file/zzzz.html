@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GitHub Repo Explorer</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    header {
+      padding: 20px;
+      text-align: center;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 32px;
+      animation: fadeDown 1s ease;
+    }
+
+    /* MAIN */
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      animation: fadeUp 1s ease;
+    }
+
+    .search-box {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      transition: box-shadow 0.3s;
+    }
+
+    .search-box input:focus {
+      box-shadow: 0 0 10px #00e6ff;
+    }
+
+    .search-box button {
+      padding: 12px 18px;
+      border: none;
+      border-radius: 6px;
+      background: #00e6ff;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .search-box button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,230,255,0.6);
+    }
+
+    /* RESULTS */
+    #results {
+      display: grid;
+      gap: 15px;
+    }
+
+    .repo {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeUp 0.6s ease;
+    }
+
+    .repo:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .repo a {
+      color: #00e6ff;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .repo p {
+      margin-top: 8px;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    /* PAGINATION */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .pagination button {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 20px;
+      background: #fff;
+      color: #000;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .pagination button:hover:not(:disabled) {
+      background: #00e6ff;
+      transform: scale(1.1);
+    }
+
+    .pagination button:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.4);
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🚀 GitHub Repository Explorer</h1>
+</header>
+
+<main>
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search GitHub repositories...">
+    <button onclick="searchRepos()">Search</button>
+  </div>
+
+  <div id="results"></div>
+
+  <div class="pagination">
+    <button id="prevBtn" onclick="changePage(-1)" disabled>⬅ Previous</button>
+    <button id="nextBtn" onclick="changePage(1)" disabled>Next ➡</button>
+  </div>
+</main>
+
+<footer>
+  © 2025 GitHub Repo Explorer | Built with HTML, CSS & JS
+</footer>
+
+<script>
+  let currentPage = 1;
+  const perPage = 5;
+  let currentQuery = "";
+
+  function searchRepos() {
+    currentQuery = document.getElementById("searchInput").value.trim();
+    if (!currentQuery) return;
+
+    currentPage = 1;
+    fetchRepos();
+  }
+
+  async function fetchRepos() {
+    const results = document.getElementById("results");
+    results.innerHTML = "⏳ Loading repositories...";
+
+    try {
+      const res = await fetch(
+        `https://api.github.com/search/repositories?q=${currentQuery}&page=${currentPage}&per_page=${perPage}`
+      );
+      const data = await res.json();
+
+      showRepos(data.items);
+
+      prevBtn.disabled = currentPage === 1;
+      nextBtn.disabled = data.items.length < perPage;
+    } catch {
+      results.innerHTML = "❌ Error loading data";
+    }
+  }
+
+  function showRepos(repos) {
+    const results = document.getElementById("results");
+    results.innerHTML = "";
+
+    repos.forEach(repo => {
+      const div = document.createElement("div");
+      div.className = "repo";
+      div.innerHTML = `
+        <a href="${repo.html_url}" target="_blank">${repo.full_name}</a>
+        <p>${repo.description || "No description available"}</p>
+        <p>⭐ ${repo.stargazers_count} | 🍴 ${repo.forks_count}</p>
+      `;
+      results.appendChild(div);
+    });
+  }
+
+  function changePage(step) {
+    currentPage += step;
+    fetchRepos();
+  }
+</script>
+
+</body>
+</html>
