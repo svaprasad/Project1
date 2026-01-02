@@ -1,252 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>GitHub Repo Explorer</title>
+<meta charset="UTF-8">
+<title>Country Explorer – Slide Panel</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:cursive;
+}
 
-    body {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      min-height: 100vh;
-    }
 
-    /* HEADER */
-    header {
-      padding: 20px;
-      text-align: center;
-      background: rgba(0,0,0,0.4);
-      backdrop-filter: blur(10px);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+body{
+  height:100vh;
+  /* display:flex; */
+  align-items:center;
+  justify-content:center;
+  font-family:Arial, sans-serif;
+  color:white;
 
-    header h1 {
-      font-size: 32px;
-      animation: fadeDown 1s ease;
-    }
+  /* CSS-only animation */
+  animation: bgChange 5s infinite alternate;
+}
 
-    /* MAIN */
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      animation: fadeUp 1s ease;
-    }
+/* Smooth solid color transitions */
+@keyframes bgChange {
+  0%   { background:#1abc9c; }
+  20%  { background:#3498db; }
+  40%  { background:#9b59b6; }
+  60%  { background:#e67e22; }
+  80%  { background:#e74c3c; }
+  100% { background:#2ecc71; }
+}
 
-    .search-box {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 30px;
-    }
+/* HEADER */
+header img{
+  width: 10%;
+  margin-top: 30px;
+  margin-left: 20px;
+}
 
-    .search-box input {
-      flex: 1;
-      padding: 12px;
-      font-size: 16px;
-      border-radius: 6px;
-      border: none;
-      outline: none;
-      transition: box-shadow 0.3s;
-    }
+/* MAIN */
+.main{
+  min-height:100vh;
+  display:flex;
+}
 
-    .search-box input:focus {
-      box-shadow: 0 0 10px #00e6ff;
-    }
 
-    .search-box button {
-      padding: 12px 18px;
-      border: none;
-      border-radius: 6px;
-      background: #00e6ff;
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+/* LEFT */
+.left{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  /* padding-right: 100px; */
+  margin-left: 100px;
+}
 
-    .search-box button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0,230,255,0.6);
-    }
+.left h2{
+  font-size: 65px;
+  /* margin-bottom:10px; */
+  color: olivedrab;
+}
 
-    /* RESULTS */
-    #results {
-      display: grid;
-      gap: 15px;
-    }
+.left p{
+  opacity:.8;
+  margin-bottom:30px;
+}
 
-    .repo {
-      background: rgba(255,255,255,0.1);
-      padding: 20px;
-      border-radius: 12px;
-      transition: transform 0.3s, box-shadow 0.3s;
-      animation: fadeUp 0.6s ease;
-    }
+/* SEARCH */
+.search-box{
+  display:flex;
+  gap:10px;
+}
 
-    .repo:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    }
+.search-box input{
+  padding: 22px;
+  width:320px;
+  border-radius:8px;
+  border:none;
+  outline:none;
+}
 
-    .repo a {
-      color: #00e6ff;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-    }
+.search-box button{
+  padding:16px 24px;
+  border:none;
+  border-radius:8px;
+  background:#71f13e;
+  color:#020202;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.2s;
+  font-size: 25px;
+}
 
-    .repo p {
-      margin-top: 8px;
-      font-size: 14px;
-      opacity: 0.9;
-    }
+.search-box button:hover{
+  transform:translateY(-5px);
+}
 
-    /* PAGINATION */
-    .pagination {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 30px;
-    }
+/* RIGHT PANEL */
+.panel{
+  width:380px;
+  /* padding:25px; */
+  margin-top: 50px;
+}
 
-    .pagination button {
-      padding: 10px 16px;
-      border: none;
-      border-radius: 20px;
-      background: #fff;
-      color: #000;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
+.panel.show{
+  transform:translateX(0);
+}
 
-    .pagination button:hover:not(:disabled) {
-      background: #00e6ff;
-      transform: scale(1.1);
-    }
+.panel img{
+  width:100%;
+  border-radius:12px;
+  margin-bottom:15px;
+}
 
-    .pagination button:disabled {
-      opacity: 0.4;
-      cursor: not-allowed;
-    }
+.panel p{
+  margin:10px 0;
+}
 
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: rgba(0,0,0,0.4);
-      margin-top: 40px;
-      font-size: 14px;
-    }
-
-    /* ANIMATIONS */
-    @keyframes fadeDown {
-      from {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
+/* FOOTER */
+footer{
+  position:absolute;
+  bottom:1px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:.85rem;
+  opacity:.7;
+}
+#countryInput{
+  font-size: 18px;
+  color: #000000;
+}
+</style>
 </head>
+
 <body>
+  <header><img src="./oppty.png" alt="image show"></header>
 
-<header>
-  <h1>🚀 GitHub Repository Explorer</h1>
-</header>
 
-<main>
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Search GitHub repositories...">
-    <button onclick="searchRepos()">Search</button>
+
+<div class="main">
+  <div class="left">
+    <h2>Explore Countries</h2>
+    <p>Search a country to view Information</p>
+
+    <div class="search-box">
+      <input type="text" id="countryInput" placeholder="Enter Country Name...">
+      <button onclick="searchCountry()">Search</button>
+    </div>
   </div>
 
-  <div id="results"></div>
+  <div class="panel" id="panel"></div>
+</div>
 
-  <div class="pagination">
-    <button id="prevBtn" onclick="changePage(-1)" disabled>⬅ Previous</button>
-    <button id="nextBtn" onclick="changePage(1)" disabled>Next ➡</button>
-  </div>
-</main>
 
-<footer>
-  © 2025 GitHub Repo Explorer | Built with HTML, CSS & JS
-</footer>
+<footer>© 2026 Country Explorer</footer>
 
 <script>
-  let currentPage = 1;
-  const perPage = 5;
-  let currentQuery = "";
-
-  function searchRepos() {
-    currentQuery = document.getElementById("searchInput").value.trim();
-    if (!currentQuery) return;
-
-    currentPage = 1;
-    fetchRepos();
+function searchCountry() {
+  var name = countryInput.value.trim();
+  if (!name) {
+    alert("Enter country name");
+    return;
   }
 
-  async function fetchRepos() {
-    const results = document.getElementById("results");
-    results.innerHTML = "⏳ Loading repositories...";
+  fetch("https://restcountries.com/v3.1/name/" + name + "?fullText=true")
+    .then(function (res) {
+      if (!res.ok) {
+        throw new Error("Not found");
+      }
+      return res.json();
+    })
+    .then(function (data) {
+      var c = data[0];  
 
-    try {
-      const res = await fetch(
-        `https://api.github.com/search/repositories?q=${currentQuery}&page=${currentPage}&per_page=${perPage}`
-      );
-      const data = await res.json();
+      var currency = c.currencies
+        ? Object.values(c.currencies)[0].name
+        : "N/A";
 
-      showRepos(data.items);
+      var languages = c.languages
+        ? Object.values(c.languages).join(", ")
+        : "N/A";
 
-      prevBtn.disabled = currentPage === 1;
-      nextBtn.disabled = data.items.length < perPage;
-    } catch {
-      results.innerHTML = "❌ Error loading data";
-    }
-  }
-
-  function showRepos(repos) {
-    const results = document.getElementById("results");
-    results.innerHTML = "";
-
-    repos.forEach(repo => {
-      const div = document.createElement("div");
-      div.className = "repo";
-      div.innerHTML = `
-        <a href="${repo.html_url}" target="_blank">${repo.full_name}</a>
-        <p>${repo.description || "No description available"}</p>
-        <p>⭐ ${repo.stargazers_count} | 🍴 ${repo.forks_count}</p>
+      panel.innerHTML = `
+        <img src="${c.flags.png}" alt="Flag">
+        <p><b>Country:</b> ${c.name.common}</p>
+        <p><b>Capital:</b> ${c.capital ? c.capital[0] : "N/A"}</p>
+        <p><b>Population:</b> ${c.population.toLocaleString()}</p>
+        <p><b>Currency:</b> ${currency}</p>
+        <p><b>Languages:</b> ${languages}</p>
       `;
-      results.appendChild(div);
-    });
-  }
 
-  function changePage(step) {
-    currentPage += step;
-    fetchRepos();
-  }
+      panel.classList.add("show");
+    })
+    .catch(function () {
+      alert("Country not found");
+    });
+}
 </script>
 
 </body>
