@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Farmer's Day Activities</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#f4f1ec;
+  color:#2b2b2b;
+}
+
+/* ---------- HEADER ---------- */
+header{
+  background:#2f5d50;
+  color:#fff;
+  padding:40px 20px;
+  text-align:center;
+}
+
+header h1{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+header p{
+  font-size:18px;
+  opacity:0.9;
+}
+
+/* ---------- SECTION ---------- */
+.section{
+  max-width:1100px;
+  margin:60px auto;
+  padding:0 20px;
+}
+
+.section h2{
+  font-size:34px;
+  margin-bottom:30px;
+  border-left:6px solid #2f5d50;
+  padding-left:15px;
+}
+
+/* ---------- ACTIVITY CARD ---------- */
+.activity{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  margin-bottom:70px;
+  align-items:center;
+}
+
+.activity img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.activity .text h3{
+  font-size:26px;
+  margin-bottom:15px;
+}
+
+.activity .text p{
+  font-size:18px;
+  line-height:1.7;
+}
+
+/* ---------- BUTTON ---------- */
+button{
+  margin-top:20px;
+  padding:12px 28px;
+  font-size:16px;
+  background:#2f5d50;
+  color:#fff;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+  background:#2f5d50;
+  color:#fff;
+  text-align:center;
+  padding:25px;
+  margin-top:80px;
+  font-size:15px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:900px){
+  .activity{
+    grid-template-columns:1fr;
+  }
+  header h1{
+    font-size:34px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Farmer’s Daily Activities</h1>
+  <p>From sunrise to sunset – a farmer’s hard-working day</p>
+</header>
+
+<section class="section">
+
+  <!-- MORNING -->
+  <h2>🌅 Morning</h2>
+  <div class="activity">
+    <img src="https://images.unsplash.com/photo-1592982537447-6a33a4c5d8b1" alt="Morning farming">
+    <div class="text">
+      <h3>Field Preparation</h3>
+      <p>
+        Farmers start their day early in the morning.
+        They prepare the fields, plough the land, and check soil conditions.
+        Morning time is best for heavy work due to cool weather.
+      </p>
+      <button onclick="showMsg('Morning')">Learn More</button>
+    </div>
+  </div>
+
+  <!-- AFTERNOON -->
+  <h2>☀️ Afternoon</h2>
+  <div class="activity">
+    <div class="text">
+      <h3>Irrigation & Crop Care</h3>
+      <p>
+        During afternoon, farmers irrigate crops, remove weeds,
+        and protect plants from pests.
+        Proper water management is very important at this stage.
+      </p>
+      <button onclick="showMsg('Afternoon')">Learn More</button>
+    </div>
+    <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Irrigation">
+  </div>
+
+  <!-- EVENING -->
+  <h2>🌇 Evening</h2>
+  <div class="activity">
+    <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae" alt="Evening farming">
+    <div class="text">
+      <h3>Harvesting & Planning</h3>
+      <p>
+        In the evening, farmers harvest crops, store produce,
+        and plan for the next day.
+        They also take care of animals and tools before resting.
+      </p>
+      <button onclick="showMsg('Evening')">Learn More</button>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  Respect Farmers • They Feed the Nation 🌾
+</footer>
+
+<script>
+function showMsg(time){
+  alert(
+    time + " activities are very important in a farmer's life.\n" +
+    "Every stage needs care, patience, and hard work."
+  );
+}
+</script>
+
+</body>
+</html>
