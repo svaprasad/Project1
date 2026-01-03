@@ -13,7 +13,7 @@ body {
   color: #2b2b2b;
 }
 
-/* NAVBAR */
+
 nav {
   background: #244b41;
   padding: 15px 40px;
@@ -83,7 +83,7 @@ header p {
   padding-left: 15px;
 }
 
-/* ACTIVITY */
+
 .activity {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -107,7 +107,7 @@ header p {
   line-height: 1.7;
 }
 
-/* CROPS */
+
 .crop-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -129,7 +129,7 @@ header p {
   line-height: 1.6;
 }
 
-/* TIPS */
+
 .tips {
   background: #fff;
   border-radius: 20px;
@@ -151,7 +151,7 @@ header p {
   line-height: 1.6;
 }
 
-/* FOOTER */
+
 footer {
   background: #2f5d50;
   color: #fff;
@@ -161,7 +161,7 @@ footer {
   font-size: 15px;
 }
 
-/* FARMER IMAGE SLIDER */
+
 .farmer-slider {
   overflow: hidden;
   width: 100%;
@@ -195,7 +195,7 @@ footer {
   }
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 900px) {
   nav ul {
     display: none;
