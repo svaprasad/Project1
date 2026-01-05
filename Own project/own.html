@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Interactive Web Project</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./own.css">
+
+</head>
+
+<body>
+
+<header>
+  <h1>Interactive Web Project</h1>
+  <nav>
+    <a>Home</a>
+    <a>Dynamic</a>
+    <a>Timer</a>
+    <a>Contact Form</a>
+  </nav>
+</header>
+
+<div class="container">
+
+<!-- ABOUT + RIGHT IFRAME MAP -->
+<section>
+  <h2>About This Project</h2>
+  <div class="grid">
+    <div>
+      <p>This is a sample interactive web page built using HTML and JavaScript.</p>
+      <ul>
+        <li>DOM manipulation</li>
+        <li>Form validation</li>
+        <li>Event handling</li>
+        <li>Dynamic updates</li>
+        <li>Local storage</li>
+      </ul>
+    </div>
+
+    <div>
+      <iframe id="iframeMap"
+        src="https://www.google.com/maps?q=San+Francisco&output=embed"></iframe>
+      <button class="outline" onclick="toggleIframe()">Toggle Map</button>
+    </div>
+  </div>
+</section>
+
+<!-- TODO + TIMER -->
+<section class="grid">
+  <div class="todo">
+    <h2>Interactive To-Do List</h2>
+    <input id="taskInput" placeholder="New Task...">
+    <button onclick="addTask()">Add</button>
+
+    <ul id="taskList"></ul>
+
+    <div class="note">Tasks are saved in local storage.</div>
+    <button class="outline" onclick="clearTasks()">Clear All Tasks</button>
+  </div>
+
+  <div class="timer">
+    <h2>Auto-Updating Timer</h2>
+    <h3 id="timer1">00:00:00</h3>
+    <button onclick="toggleTimer1()">Pause Timer</button>
+    <button onclick="resetTimer1()">Reset Timer</button>
+  </div>
+</section>
+
+<!-- LEFT API MAP + CONTACT -->
+<section class="grid">
+  <div>
+    <h2>Feat Hessions & Videos</h2>
+
+    <!-- REAL GOOGLE MAP -->
+    <div id="leftMap" class="leftimg"> <img src="./Index/OIP.webp" alt="" onclick="openMap()"></div>
+
+    <!-- <button onclick="openMap()">Open Location</button> -->
+  </div>
+
+  <div>
+    <h2>Contact Form</h2>
+    <form onsubmit="submitForm(event)">
+      <label>Name</label>
+      <input id="name">
+      <div class="error" id="nameErr">Please enter your name.</div>
+
+      <label>Email</label>
+      <input id="email">
+      <div class="error" id="emailErr">Please enter a valid email.</div>
+
+      <label>Password</label>
+      <input type="password" id="password">
+      <div class="error" id="passErr">Password must be at least 6 characters.</div>
+
+      <label>Message</label>
+      <textarea rows="4"></textarea>
+
+      <label>Subscribe to newsletter?</label>
+      <label><input type="radio" name="news"> Yes</label>
+      <label><input type="radio" name="news"> No</label>
+
+      <br><br>
+      Preferred Contact:
+      <label><input type="checkbox"> Email</label>
+      <label><input type="checkbox"> Phone</label>
+
+      <br><br>
+      <button class="outline" type="reset">Clear Data</button>
+      <div class="success" id="successMsg">
+        Your information is saved in this browser!
+      </div>
+    </form>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  © 2024 Interactive Web Project | user@example.com<br><br>
+  <a>Privacy Policy</a> | <a>Terms of Service</a>
+</footer>
+
+<!-- GOOGLE MAPS API -->
+<script src="https://www.google.com/maps?q=San+Francisco&output=embed"></script>
+
+<script src="./own.js"></script>
+</body>
+</html>
